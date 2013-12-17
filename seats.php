@@ -80,7 +80,7 @@ function make_legend($numberedseats) {
 	    /* if there is only one class, use the color for that
 	       class, otherwise show as orange */
 	    if (count($prices)>1) $class = 'default';
-	    echo "<td>".$lang["seat_occupied"]."</td><td class='cls$class' align='center'></td>";
+	    echo "<td>".$lang["seat_occupied"]."</td><td class='stpaid' align='center'></td>";
 	    echo "<td>".$lang["seat_free"]."</td><td class='cls$class' align='center'></td>";
 	  }
 	  echo "</tr></table></p>";
@@ -136,7 +136,10 @@ function seatcallback($currseat) {
   }
 
   if ($st==ST_DISABLED)
-    $colour = "clsdisabled";
+    $colour = "stdisabled";
+  else
+  if ($st!=ST_FREE)
+	$colour = "stpaid";
   else
     $colour = "cls".$currseat['class'];
 
