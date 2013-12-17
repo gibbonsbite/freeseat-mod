@@ -80,7 +80,7 @@ function render_seatmap($theatre, $zone,
 	  /* this is the first (numbered) seat of the zone */
 	  $keycallback();
 
-	  echo "<p class='main'><table class='seatmap' border='1'>";
+	  echo "<p class='main'><table class='seatmap' border='1'><tr><td colspan='100%' class='stage'><h4>".$lang["stage"]."</h4></td></tr>";
 	  $table = true;
 	}
 
@@ -111,7 +111,7 @@ function render_seatmap($theatre, $zone,
       $currseat = mysql_fetch_assoc($allseats);
     }
 
-  if ($table) echo "<tr><td colspan='$maxlen' class='stage'><h4>".$lang["stage"]."</h4></table>";
+  if ($table) echo "</table>";
 
   /* Now show unnumbered seats. */
   $noheaderyet=true;

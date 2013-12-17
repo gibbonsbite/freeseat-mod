@@ -80,8 +80,8 @@ function make_legend($numberedseats) {
 	    /* if there is only one class, use the color for that
 	       class, otherwise show as orange */
 	    if (count($prices)>1) $class = 'default';
-	    echo "<td>".$lang["seat_occupied"]."</td><td class='cls$class' align='center'> 1 </td>";
-	    echo "<td>".$lang["seat_free"]."</td><td class='cls$class' align='center'><input type='checkbox'><br> 2 </td>";
+	    echo "<td>".$lang["seat_occupied"]."</td><td class='cls$class' align='center'></td>";
+	    echo "<td>".$lang["seat_free"]."</td><td class='cls$class' align='center'></td>";
 	  }
 	  echo "</tr></table></p>";
 	} // else : don't output anything if there are no seats...
