@@ -1,0 +1,163 @@
+NOTE: We make the following assumptions:
+
+1) there aren't two non-deleted bookings for the same seat and show.
+(Otherwise, numbers in repr.php admin mode will be wrong)
+
+2) about SESSION variables: if "seats" is set and non empty then there
+are matching "until" and "showid", and matching entries in the lock
+table. Needed by unlock_seats
+
+DONE (And changelog) ("-" means changed but not done) :
+
+* index.php
+ (permits some customisation of which spectacles are shown)
+ (support for take_down message)
+* repr.php
+ (for disabled status change to work, seats.php had to be visited for
+  the same spectacle first)
+- seats.php
+ (fixed a bug in the seat locking code - under certain conditions the
+  program would try unlocking the wrong seats. Probably not
+  exploitable though)
+ (bookingmap mode was sometimes displaying the wrong show information)
+ (under certain conditions, the requested number of non-numbered seats
+  could be lost if user requests to revise his seat selection)
+ (GETting seats.php and then skipping to confirm.php or finish.php
+  would cause category information to be lost. Also wrote a hopefully
+  reasonable behaviour in case the number of requested reduced seats
+  exceeds the number of selected seats, either because the former was
+  submitted to a value too large or because the latter got reduced for
+  various reaons)
+- cron.php
+ (fixed a potential security problem - an attacker could convince this
+  page he is logged as admin. Not exploitable unless
+  format.php/show_foot() was modified to display sensitive information
+  in admin mode)
+- functions/seat.php
+ (Greatly simplified locking mechanism, possibly eliminating potential
+  race conditions)
+ (A rare race condition might have caused booking unnumbered seats to
+  fail, incorrectly claiming all seats are booked)
+ (Maximum simultaneous bookings was incorrectly enforced for
+  unnumbered seats)
+- pay.php : Reliability and security problem:
+   1. User A enters pay.php from seats.php at time T, selecting seat S
+   2. User B enters pay.php from seats.php during the same second T,
+    selecting another seat S'.
+   3. User B goes back to seats.php (e.g. hitting "back" on his
+    browser)
+   4. User B selects S and submits to pay.php.
+
+The action should be rejected because S is supposedly locked by A, but
+pay.php doesn't distinguish newly selected (such as S) from previously
+selected (such as S'). It sees there is a lock on both, with matching
+"until" field, and extends their locks.
+
+Now both A and B have a lock on the same seat.
+If step 4 is over before time T+1, it becomes a security issue:
+
+   5. Both users proceed to finish.php (it is assumed they have
+    already provided necessary information in pay.php).
+
+Every check_session() succeed because they share the values of their
+"until" session variable (equal to T+$lockingtime). As a consequence
+book() succeeds for both users, and they both obtain distinct but
+valid booking ids.
+
+This scenario is very unlikely to happen by accident because it
+requires both users to do a full booking session in less than a
+second, and simultaneously, on the same seat (including going to
+pay.php and back to seats.php as decribed). An attacker should however
+be able to deliberately trigger this bug rather easily, using an
+automated client, provided the network and the server are fast enough.
+
+
+It should be possible to solve this without modifying the database
+schema (by having pay.php try extending existing locks only on
+previously selected seats like S' for B, not on newly selected seats
+like S for A), but it seems more reasonable to make lock ownership
+explicit in the lock table. PHP session id is used for this.
+
+- functions/seat.php/load_seats is no longer used to lock seats,
+  resolving a TODO entry in that file.
+
+TODO:
+
+§§ test the following files:
+
+* seats.php
+* pay.php
+
+§§ check the following files:
+
+* format.php/print_booked_seats with default argument as called from pay.php
+* confirm.php
+* finish.php
+
+* klikandpay.php
+* klikconfirm.php
+* paypal_confirm.php
+* paypal_pay.php
+
+* remail.php
+
+* params.php
+* bookinglist.php
+* bookings.csv.php
+* cron.php
+* show_edit.php
+
+* functions/*.php
+
+* logoff.php
+
+* config-dist.php
+
+§§ Check the following features:
+
+* seat counting in repr.php admin mode
+* check that php and mysql handle time zones consistently
+* draw a state transition diagram of which attributes are available in
+   SESSION["seats"] to be sure what is being used is always available.
+* no ka/my boom can be used to perform an xss
+* check that seats.php, in bookinglist mode, does not expect the
+   session showid variable to be correct
+* check that lock_seats is always called with a seat containing
+   attributes cnt, cat and id
+* we don't risk honouring both nncnt-$x and seats[$x]["cnt"] (Which
+   could cause actual booked number to grow exponentially)
+* what happens when a mysql request fails? (check every call and see it
+   at best degrades gracefully, at worst behaves in a weird but non
+   exploitable way)
+* complain (early!) if prices are undefined (i.e. there are seats that
+   have a category for which the spectacle hasn't defined prices)
+* load_seats doesn't *remove* any existing nncnt- SESSION entry. Check
+   this isn't a problem.
+
+§§ Translate new strings (err_tables.sql, err_nospectacles, o'clock
+and those marked with § NEW)
+
+§§ Add a new mysql user for automated stuff, to avoid having admin
+password in config.php
+
+§§ Use the new address fields in the booking table
+
+§§ Misc stuff:
+
+* Have the archive contain a "files" directory to match the config
+   file.
+* update the config-dist to use "freeseat" instead of "reservations",
+   for clarity.
+* update the README to tell about installing phpmailer.
+* more info about building a seatmap and assumptions:
+  - It's best to have all (numbered) seats with the same 'y' have the same 'row'
+* have the "ticketid" part of tickets show the rate as well.
+* check the (what is this for??) comment in functions/seat.php
+* Have a css class for that "We accept" thing in pay.php
+* use f_address() wherever needed
+* Fix: seats.php defaults to CAT_NORMAL price when a price is missing, but get_price doesn't.
+
+§§ To do after 1.1.6: 
+* In seats.php, do a single sql request to both get seat list and
+  their availability (maybe even retrieve all bookings if bookinglist
+  is set)
