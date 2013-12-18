@@ -66,7 +66,7 @@ if (!isset($_SESSION["payment"])) $_SESSION["payment"]= PAY_CCARD;
 
 /* If the price doesn't depend on the category, then don't offer
  discout option. */
-$discount_option = price_depends_on_cat($sh["spectacleid"]);
+$discount_option = false;
 
 /* All categories from which the user may choose, mapped to their $lang key. */
 $cats = array();
@@ -149,14 +149,14 @@ function pay_option($p) {
 }
 
 echo'<p class="main">'.$lang["select_payment"];
-echo '&nbsp;<select name="payment">';
+//echo '&nbsp;<select name="payment">';
 
-pay_option(PAY_CCARD);
-pay_option(PAY_POSTAL);
-pay_option(PAY_CASH);
-pay_option(PAY_OTHER);
+//pay_option(PAY_CCARD);
+//pay_option(PAY_POSTAL);
+//pay_option(PAY_CASH);
+//pay_option(PAY_OTHER);
 
-echo '</select></p>';
+//echo '</select></p>';
 
 do_hook('other_payment_info');
 
