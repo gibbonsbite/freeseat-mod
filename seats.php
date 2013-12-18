@@ -48,7 +48,7 @@ function make_legend($numberedseats) {
 /* 	    else if ($cat_price[$item['cat']]!=$item['price']) $show_price=true; */
 
 	    if (!isset($class_price[$item['class']])) $class_price[$item['class']]=$item['price'];
-	    else if ($class_price[$item['class']]!=$item['price']) $show_cat=true;
+	    else if ($class_price[$item['class']]!='0') $show_cat=true;
 	  }
 
 	  echo "<h4>" . $lang[$numberedseats?"reserved-header":"nnseat-header"] . "</h4>";
