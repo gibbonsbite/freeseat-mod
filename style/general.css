@@ -10,7 +10,7 @@
 /* These replace the format.php/cls2colour function, and tell how to
 display a seat of the given class on a seatmap */
 .cls1 {
-        background-color: blue;
+        background-color: green;
  }
 .cls2 { 
         background-color: green;
