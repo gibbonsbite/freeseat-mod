@@ -198,6 +198,8 @@ db_connect();
 
     check_session(1); // check showid
     $sh = get_show($_SESSION["showid"]);
+	$spectacleid = $sh["spectacleid"]; // movie name
+	$spec = get_spectacle($spectacleid);
     if (!check_seats())
       kaboom($lang["err_occupied"]);
   }
@@ -211,6 +213,8 @@ show_head(true);
 
 echo '<h2>'.$lang["err_checkseats"].'</h2>'; // not an error - lang item is a bit misnamed
 echo '<p class="main">';
+printf(htmlspecialchars($spec["name"]));
+echo '</p><p class="main">';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';
 

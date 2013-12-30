@@ -9,6 +9,7 @@ require_once (FS_PATH . "functions/seat.php");
 require_once (FS_PATH . "functions/session.php");
 require_once (FS_PATH . "functions/shows.php");
 require_once (FS_PATH . "functions/tools.php");
+require_once (FS_PATH . "functions/spectacle.php");
 
 /** Copyright (C) 2010 Maxime Gamboni. See COPYING for
 copying/warranty info.
@@ -26,6 +27,8 @@ if (!do_hook_exists('pay_page_top'))
 check_session(1); // just to avoid warnings on missing show id
 
 $sh = get_show($_SESSION["showid"]); // needed by load_seats
+$spectacleid = $sh["spectacleid"]; // movie name
+$spec = get_spectacle($spectacleid);
 
 /** if no set of seats is provided then just keep the one in session **/
 if (isset($_POST["load_seats"])) {
@@ -53,6 +56,8 @@ show_head();
 echo '<h2>'.$lang["summary"].'</h2>';
 
 echo "<p>";
+printf(htmlspecialchars($spec["name"])); // the movie name is shown
+echo "</p><p>";
 show_show_info($sh);
 echo "</p>\n";
 
