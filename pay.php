@@ -63,7 +63,7 @@ echo "</p>\n";
 
 echo print_booked_seats();
 
-echo '<h2>'.$lang["payment"].'</h2>';
+//echo '<h2>'.$lang["payment"].'</h2>';
 
 echo '<form action="confirm.php" method="post">';
 
@@ -153,7 +153,7 @@ function pay_option($p) {
   }
 }
 
-echo'<p class="main">'.$lang["select_payment"];
+//echo'<p class="main">'.$lang["select_payment"];
 //echo '&nbsp;<select name="payment">';
 
 //pay_option(PAY_CCARD);
