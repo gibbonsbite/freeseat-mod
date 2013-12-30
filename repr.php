@@ -118,9 +118,9 @@ foreach ($ss as $sh) {
   }
   
 
-  if ($remaining<=0)
-    echo "<li><p class='disabled'>";
-  else
+  if ($remaining<=0) {
+//    echo "<li><p class='disabled'>";
+  } else {
     echo "<li><p>";
   
   if (admin_mode())
@@ -141,6 +141,7 @@ foreach ($ss as $sh) {
     echo " (".$lang["book_adminonly"].")";
     
   echo "</p>\n";
+  }
 }
 
 ?>
