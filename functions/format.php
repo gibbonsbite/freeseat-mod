@@ -395,8 +395,7 @@ function print_booked_seats($data = null,$fmt=FMT_CORRECTLINK) {
 
   $columns = array(); // associate column header to column width in chars
   if ($fmt & FMT_SHOWID) $columns["bookid"] = 8;  // give us some room here
-  $columns = array_merge($columns,array("row" => 4,"zoneextra" => 21,
-					"col" => 6,"class" => 12));
+  $columns = array_merge($columns,array("row" => 4,"col" => 6));
   if ($fmt & FMT_PRICE) $columns = array_merge($columns,array("cat" => 11,"price" => 6));
 
   if ($fmt & FMT_SHOWINFO) {
