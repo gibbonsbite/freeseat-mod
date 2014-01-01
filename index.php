@@ -69,9 +69,11 @@ foreach ($ss as $s) {
   if (admin_mode() || ! $take_down) {
     $linkl = '<a href="repr.php?spectacleid='.$s["id"].'">';
     $linkr = '</a>';
+	$linke = '<a href="plugins/showedit/index.php?id='.$s["id"].'">';
   } else {
     $linkl = '';
     $linkr = '';
+	$linke = '';
   }
 
   echo '<tr>';
@@ -81,12 +83,16 @@ foreach ($ss as $s) {
 
   /** WARN - we assume whoever filled the description field to be
       trustworthy enough not to write malicious or malformed html */
+	if ($s["name"]) {
+		echo '<td class="showlist"><p><i>' . $s['name'] . '</i></p>';
+	}
   if ($s["description"]) {
-    echo '<td class="showlist"><p><i>' . $s['description'] . '</i></p>';
+    echo '<p><i>' . $s['description'] . '</i></p>';
   }
   do_hook_function('front_page_showlist',$s);
 
   printf('<p>'.$lang[admin_mode()?"admin_buy":"buy"].'</p>','['.$linkl,$linkr.']');
+  printf('<p>'.$lang[admin_mode()?"editshows":"Edit"].'</p>','['.$linke,$linkr.']');
 
   echo '</td></tr>';
 }
