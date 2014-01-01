@@ -502,8 +502,10 @@ echo '</div><div class="form">';
 echo '<h3>' . $lang['prices'] . '</h3>';
 echo '<table BORDER="1" CELLPADDING="4" >';
 echo '<tr><th>'. $lang["class"] . '<th>'.$lang["price"].'<th>'.$lang["price_discount"].'<th>'.$lang["comment"].'</tr>';
-for ( $i=1; $i<=4; $i++ ) { // class loop
-	echo '<tr><td>'. $i . '</td>';
+for ( $i=1; $i<=2; $i++ ) { // class loop
+	if ($i==1) echo '<tr><td>3D</td>';
+	if ($i==2) echo '<tr><td>Norm</td>';
+	//echo '<tr><td>'. $i . '</td>';
 	for ( $j=CAT_NORMAL; $j>=CAT_REDUCED; $j-- ) { // cat loop
 		echo '<td>';
 		print_var("p_$i"."_$j",price_to_string($prices[$i][$j]));
