@@ -1,3 +1,11 @@
+<link rel="stylesheet" href="datepicker.css" type="text/css" />
+<script src="/jquery/jquery-1.9.1.js"></script>
+<script src="/jquery/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
+  });
+  </script>
 <?php
 define ('FS_PATH','../../');
 
@@ -164,9 +172,13 @@ function print_var( $name, $value, $headername=null) {
 	if ($name=="description" && !$ready) { // i am so sorry
 	  echo '<textarea name="'.$name.'" border=1 rows=6 cols=35>' . $value; 
 	  echo '</textarea>';
-	} else {
-	  $escvalue = htmlspecialchars($value);
-	  echo '<input '.($ready?'type="hidden" ':'').' name="'.$name.'" value="'.$escvalue.'">';
+	} elseif(strpos($name,'d')!==false){
+		$escvalue = htmlspecialchars($value);
+		echo '<script>$(function() { $( "#'.$name.'" ).datepicker({ dateFormat: "yy-mm-dd" }); });</script>';
+		echo '<input '.($ready?'type="hidden" ':'').' name="'.$name.'" id="'.$name.'" value="'.$escvalue.'">';
+		} else {
+		$escvalue = htmlspecialchars($value);
+		echo '<input '.($ready?'type="hidden" ':'').' name="'.$name.'" value="'.$escvalue.'">';
 	}
 	if ($ready) {
 	    /* Note that we *don't* escape $value. The point is to let
@@ -476,7 +488,7 @@ else
     $perfcount = $dispperf;
 
 if (isset($_POST["addperf"]))
-     $perfcount ++;
+     $perfcount=$perfcount+10;
 
 if (!$ready) {
   for ($i = $nextxtra; $dispperf<$perfcount; $i++) {
