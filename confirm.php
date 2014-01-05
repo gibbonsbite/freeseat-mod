@@ -70,6 +70,8 @@ if (isset($_POST["payment"])) {
     $_SESSION["payment"]=PAY_POSTAL;
     break;
   }
+} else {
+$_SESSION["payment"]=PAY_CASH;
 }
 
 check_session(4);
