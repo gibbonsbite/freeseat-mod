@@ -69,7 +69,6 @@ function make_legend($numberedseats) {
 	    echo "<td class='cls$class' align='center'><p>";
 	    if ($show_price) {
 		echo $currency .' '. price_to_string($val[CAT_NORMAL]);
-		echo '&euro;';
 	      if ($show_cat) echo '<br>'.$currency .' '. price_to_string($val[((isset($val[CAT_REDUCED])) ? CAT_REDUCED : CAT_NORMAL)]);
 	    } else {
 	      echo $lang["class"].' '.$class;

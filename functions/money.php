@@ -35,7 +35,9 @@ Price calculation functions
 function price_to_string($price) {
     global $moneyfactor;
 
-    return number_format((round($price))/$moneyfactor,2,'.','');
+//    return number_format((round($price))/$moneyfactor,2,'.','');
+	setlocale(LC_MONETARY,"fi_FI");
+	return money_format("%.2n", (round($price))/$moneyfactor);
 }
 
 /** Convert a string representing an amount of $currency (eg "43.99")
