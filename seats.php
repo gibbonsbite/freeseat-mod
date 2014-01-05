@@ -38,7 +38,7 @@ function make_legend($numberedseats) {
 	$prices= array();
 
 	//	$show_price= false; // set to true if prices depend on class
-	$show_cat  = true;  // set to true if prices depend on cat
+	$show_cat  = false;  // set to true if prices depend on cat
 
 	if ($list = fetch_all(mysql_query($q))) {
 	  foreach ( $list as $item ) {
@@ -48,7 +48,7 @@ function make_legend($numberedseats) {
 /* 	    else if ($cat_price[$item['cat']]!=$item['price']) $show_price=true; */
 
 	    if (!isset($class_price[$item['class']])) $class_price[$item['class']]=$item['price'];
-	    else if ($class_price[$item['class']]!='0') $show_cat=false;
+	    else if ($class_price[$item['class']]!='0') $show_cat=true;
 	  }
 
 	  echo "<h4>" . $lang[$numberedseats?"reserved-header":"nnseat-header"] . "</h4>";
