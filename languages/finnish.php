@@ -35,7 +35,7 @@ $lang["cat_normal"] = 'Normaali ';
 $lang["cat_reduced"] = 'Alennus ';
 $lang["ccard_failed"] = '%1$s WHILE PROCESSING A CREDIT CARD NOTIFICATION\n\n\n';
 $lang["ccard_partner"] = 'Credit card payment made secure by&nbsp;%1$s';
-$lang["change_date"] = 'Muuta päivämäärää';
+$lang["change_date"] = 'Muuta näytöstä';
 $lang["change_pay"] = 'Muuta %1$sHenkilö ja maksutietoja%2$s';
 $lang["change_seats"] = 'Muuta %1$sPaikan valintaa%2$s';
 $lang["check_st_update"] = 'Varmista että allaoleva lista varauksista jotka %1$s on oikein ja paina Varmista tämän sivun alalaidasta';
@@ -458,7 +458,7 @@ $lang["seat_occupied"] = 'Varattu<br>Paikka:';
 $lang["seats"] = 'Paikat';
 $lang["seats_booked"] = 'Varatut paikat';
 $lang["seeasalist"] = 'Näytä %1$slistana%2$s';
-$lang["seeasamap"] = 'Seuraava linkki näyttää varaukset tähän näytökseen a&nbsp;: %1$svarauskarttana%2$s';
+$lang["seeasamap"] = 'Näytä varaukset tähän näytökseen %1$svarauskarttana%2$s';
 $lang["select"] = 'Valitse';
 $lang["select_payment"] = 'Valitse maksutapa:';
 $lang["selected_1"] = '1 paikka valittu';
@@ -527,7 +527,7 @@ names (We have a problem in case we need to know if $w is masculine or
 feminine or whatever - so far everything has been masculine so won't
 extend the function until need appears :-) **/
 function lang_at_the($w) {
-  return "in de $w";
+  return "$w";
 }
 
 ?>
