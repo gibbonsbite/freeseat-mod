@@ -128,13 +128,16 @@ if(isset($_GET['nohide'])) {
   elseif ($remaining>0)
     echo "<li><p>";
   
-  if (admin_mode() && $allshown)
+  if ($remaining>0 && admin_mode())
+    echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
+	
+  if ($remaining<=0 && admin_mode() && $allshown)
     echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
 
   if ($remaining>0 || admin_mode() && $allshown)
     echo "[<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>]";
   else
-  if (admin_mode() && $allshown) {
+  if (admin_mode()) {
   echo "[".$lang["closed"]."]";
 
   if (admin_mode()) echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
