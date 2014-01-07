@@ -151,7 +151,7 @@ foreach ($ss as $sh) {
 <?php
 
 do_hook('repr_display');
-if (admin_mode()) echo '<input type="submit" value="Save changes"></form>';
+if (admin_mode()) echo '<input type="submit" value='.$lang["save"].'></form>';
 
 echo '<p class="main">';
 printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
