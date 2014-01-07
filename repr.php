@@ -16,8 +16,6 @@ copying/warranty info.
 $Id: repr.php 381 2012-03-27 01:26:42Z twowheeler $
 */
 
-$allshown=false;
-
 db_connect();
 
 if ($take_down && !admin_mode()) fatal_error($take_down);
@@ -119,39 +117,31 @@ foreach ($ss as $sh) {
       $remaining = 0;
   }
   
-if(isset($_GET['nohide'])) {
-   $allshown=true;
-}
-  
-  if ($remaining<=0 && admin_mode() && $allshown)
-    echo "<li><p class='disabled'>";
-  elseif ($remaining>0)
+
+  if ($remaining<=0) {
+//    echo "<li><p class='disabled'>";
+  } else {
     echo "<li><p>";
   
-  if (admin_mode() && $allshown)
+  if (admin_mode())
     echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
 
-  if ($remaining>0 || admin_mode() && $allshown)
+  if ($remaining>0 || admin_mode())
     echo "[<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>]";
   else
-  if (admin_mode() && $allshown) {
-  echo "[".$lang["closed"]."]";
+    echo "[".$lang["closed"]."]";
 
   if (admin_mode()) echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
-  }
 
-  if ($remaining>0) {
-	echo ' : ';
-	show_show_info($sh,false);
-  } elseif (admin_mode() && $allshown) {
-	echo ' : ';
-	show_show_info($sh,false);
-	}
+  echo ' : ';
 
-  if ($remaining<=0 && admin_mode() && $allshown)
+  show_show_info($sh,false);
+
+  if ($remaining<=0 && admin_mode())
     echo " (".$lang["book_adminonly"].")";
     
   echo "</p>\n";
+  }
 }
 
 ?>
