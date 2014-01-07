@@ -58,7 +58,7 @@ $lang["days"] = 'p‰iv‰t';
 $lang["DELETE"] = 'Poistettu'; // used in check_st_update
 $lang["description"] = 'Kuvaus';
 $lang["diffprice"] = 'Hinnat ovat v‰rikoodattu alla olevan listan mukaisesti';
-$lang["disabled"] = "Lopetettu"; // for shows or payment methods
+$lang["disabled"] = "Suljettu"; // for shows or payment methods
 $lang["dump_csv"] = 'Tietokanta CSV-muodossa: %1$sbookings.csv%2$s';
 
 $lang['editshows'] = 'Lis‰‰ tai muokkaa %1$selokuvan%2$s tietoja';
