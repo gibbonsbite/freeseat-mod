@@ -12,9 +12,9 @@ $lang["access_denied"] = 'Pääsy kielletty - Istuntosi on vanhentunut';
 $lang["acknowledge"] = 'Tunnustettu'; // used with check_st_update
 $lang["address"] = 'Osoite';
 $lang["admin"] = 'Hallinta toiminnot';
-$lang["admin_buy"] = 'Varaa ja %1$sosta%2$s lippuja';
+$lang["admin_buy"] = '%1$sVaraa%2$s lippuja';
 $lang["alert"] = 'VAROITUS';
-$lang["are-you-ready"] = 'Varmista varauksesi tiedot ja paina Jatka.';
+$lang["are-you-ready"] = 'Varmista tiedot ja paina Jatka.';
 
 $lang["backto"] = 'Takaisin %1$s';
 $lang["book"] = 'Varaa';
@@ -23,7 +23,7 @@ $lang["bookid"] = 'Koodi';
 $lang["book_adminonly"] = 'Varaus suljettu';
 $lang["book_submit"] = 'Tee varaus';
 $lang["booking_st"] = 'Varaukset tilassa %1$s';
-$lang["bookinglist"] = 'Selaa/Muokkaa %1$sbookings%2$s (esim. maksun hyväksymiseen)';
+$lang["bookinglist"] = 'Selaa/Muokkaa %1$svarauksia%2$s (mm. maksun hyväksymiseen)';
 $lang["bookingmap"] = 'Varauskartta';
 $lang["buy"] = 'Varaa ja %1$sosta%2$s lippuja';
 
@@ -51,7 +51,7 @@ $lang["col"] = 'Paikka';
 $lang["create_show"] = 'Luo uusi esitys';
 
 $lang["date"] = 'Pvm';
-$lang['datesandtimes'] = 'Näytä päivät';
+$lang['datesandtimes'] = 'Näytökset';
 $lang["date_title"] = 'Pvm<br>(dd.mm.yyyy)';
 $lang["day"] = 'pv.'; // abbreviated
 $lang["days"] = 'päivät';
@@ -61,7 +61,7 @@ $lang["diffprice"] = 'Hinnat ovat värikoodattu alla olevan listan mukaisesti';
 $lang["disabled"] = "Ei käytössä"; // for shows or payment methods
 $lang["dump_csv"] = 'Tietokanta CSV-muodossa: %1$sbookings.csv%2$s';
 
-$lang['editshows'] = 'Lisää tai muokkaa %1$sshow%2$s tietoja';
+$lang['editshows'] = 'Lisää tai muokkaa %1$selokuvan%2$s tietoja';
 $lang["email"] = 'Email';
 $lang["err_bademail"] = 'Sähköpostiosoite ei ole hyväksytyssä muodossa';
 $lang["err_badip"] = 'Sinulla ei ole pääsyoikeuksia tähän tiedostoon';
@@ -191,7 +191,7 @@ Saat varaukset sähköpostiisi. Muista tarkistaa roskaposti kansio!</p>
 <p class='main'>Sähköposti: %1\$s</p>
 
 <p class='main'>(jos et antanut varatessasi sähköpostiosoitetta
-tai sinulla ei ole enään pääsyä siihen, ota yhteys meihin puhelimitse tai kassalla aukioloaikoina)</p>
+tai sinulla ei ole enään pääsyä siihen, ota yhteys meihin aukioloaikoina puhelimitse tai kassalla)</p>
 
 EOD;
 
@@ -216,7 +216,7 @@ $lang["lastname"] = 'Sukunimi';
 $lang["legend"] = 'Paikat: ';
 $lang["link_bookinglist"] = 'Varauslista';
 $lang["link_edit"] = 'Muokkaa näytöksiä';
-$lang["link_index"] = 'Etusivu';
+$lang["link_index"] = 'Etusivulle';
 $lang["link_pay"] = 'Henkilötiedot';
 $lang["link_repr"] = 'Näytös lista';
 $lang["link_seats"] = 'Paikan valinta';
