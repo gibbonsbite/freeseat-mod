@@ -65,9 +65,8 @@ h1 {
 
 
 h2 {
-    color : #974608;
-    font-family : sans-serif;
-    font-variant : small-caps;
+    color : #9e0c0f;
+    font-family: 'Oswald', sans-serif;
     margin-left : 0.5em;
   }
 
@@ -86,7 +85,7 @@ a:hover {
 
 /*** PARAGRAPHS ***/
 p {
-    font-family : serif;
+    font-family: 'Oswald', sans-serif;
     color: black;
   }
 
