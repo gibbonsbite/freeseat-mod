@@ -134,13 +134,12 @@ if(isset($_GET['nohide'])) {
   if ($remaining<=0 && admin_mode() && $allshown)
     echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
 
-  if ($remaining>0 || admin_mode() && $allshown)
+  if ($remaining>0 || admin_mode() && $allshown) {
     echo "[<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>]";
-  else
-  if (admin_mode()) {
+	if (admin_mode()) echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
+} elseif (admin_mode() && $allshown) {
   echo "[".$lang["closed"]."]";
-
-  if (admin_mode()) echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
+  echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
   }
 
   if ($remaining>0) {
@@ -167,6 +166,11 @@ do_hook('repr_display');
 if (admin_mode()) echo '<input type="submit" value='.$lang["save"].'></form>';
 
 echo '<p class="main">';
+if ($allshown && admin_mode()) {
+printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="/booking/repr.php?spectacleid='.$spectacleid.'">','</a>]');
+} elseif (admin_mode()) {
+printf('<p class="main">'.$lang["showallspec"].'</p>','[<a href="/booking/repr.php?spectacleid='.$spectacleid.'&nohide">','</a>]');
+}
 printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
 echo '</p>';
 
