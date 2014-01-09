@@ -9,6 +9,9 @@
 
 /* These replace the format.php/cls2colour function, and tell how to
 display a seat of the given class on a seatmap */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
 .cls1 {
         background-color: green;
  }
@@ -60,7 +63,7 @@ body {
  } */
 
 h1 {
-    font-family : sans-serif;
+    font-family : font-family: 'Oswald', sans-serif;
   }
 
 
@@ -307,6 +310,7 @@ td.stage {
 }
 
 th.ticket { 
+	font-family: 'Oswald', sans-serif;
     font-weight: normal;
  }
 

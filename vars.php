@@ -1,5 +1,3 @@
-<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-
 <?php
 
 define("FS_VERSION", "1.4.1b");

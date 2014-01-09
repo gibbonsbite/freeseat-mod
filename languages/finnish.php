@@ -448,7 +448,7 @@ $lang["reqd_info"] = <<<EOD
 Sinun täytyy täyttää vähintään etu ja sukunimi tehdessäsi varausta.
 Jos annat sähköpostiosoitteen, saat varaustiedot myös sähköpostitse.
 EOD;
-$lang["reserved-header"] = 'Varatut paikat';
+$lang["reserved-header"] = 'Salikartta';
 $lang["row"] = 'Rivi';
 
 $lang["sameprice"] = 'Hinnat ovat samat kaikissa luokissa';
