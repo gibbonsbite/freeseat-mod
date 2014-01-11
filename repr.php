@@ -136,7 +136,10 @@ if(isset($_GET['nohide'])) {
 
   if ($remaining>0 || admin_mode() && $allshown) {
     echo "[<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>]";
-	if (admin_mode()) echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
+	if (admin_mode()) {
+	echo "[<a href='".FS_PATH."plugins/bookingmap/?showid=".$sh["id"]."'>".$lang["bookingmap"]."</a>]";
+	echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
+	}
 } elseif (admin_mode() && $allshown) {
   echo "[".$lang["closed"]."]";
   echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
@@ -150,8 +153,11 @@ if(isset($_GET['nohide'])) {
 	show_show_info($sh,false);
 	}
 
-  if ($remaining<=0 && admin_mode() && $allshown)
+  if ($remaining<=0 && admin_mode() && $allshown){
     echo " (".$lang["book_adminonly"].")";
+	printf($lang["bookingmap"],'[<a href="'. FS_PATH . 'plugins/bookingmap/?showid='.$sh['id'].'">','</a>]');
+	}
+	
     
   echo "</p>\n";
 }
