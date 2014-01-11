@@ -227,7 +227,19 @@ div.image-selection{
 
 div.narrow {
 /*    background:  url(reservations/affiche.jpeg) no-repeat; */
-    padding-left: 213px;
+position: relative;
+width: 800px;
+    margin-left:auto;
+	margin-right:auto;
+/*    float: right; */
+}
+
+div.wide {
+/*    background:  url(reservations/affiche.jpeg) no-repeat; */
+position: relative;
+width: 1000px;
+    margin-left:auto;
+	margin-right:auto;
 /*    float: right; */
 }
 
