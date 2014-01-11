@@ -15,7 +15,7 @@ function adminprint_process() {
 
   if (count($ab) && isset($_POST["print"])) {
     show_head(true);
-
+	$setstate = ST_PAID; //Set state to PAID when printing
     do_hook('adminprint_process');  // process parameters from bookinglist
 
     /* Ticketing-printing plugins may request to override ticket
