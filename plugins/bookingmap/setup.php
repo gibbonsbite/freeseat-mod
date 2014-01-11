@@ -23,7 +23,7 @@ function bookingmap_linkfromseats() {
   global $lang, $sh;
 
   if (admin_mode()) {
-    echo '<p class="main">';
+    echo '<p class="fine-print">';
     printf($lang["seeasamap"],
 '[<a href="'. FS_PATH . 'plugins/bookingmap/?showid='.$sh['id'].'">','</a>]');
     echo '</p>';

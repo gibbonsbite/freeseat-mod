@@ -24,7 +24,7 @@ function disableseats_linkfromseats() {
   global $lang, $sh;
 
   if (admin_mode()) {
-    echo '<p class="main">';
+    echo '<p class="fine-print">';
     printf($lang["seedisabledseats"],
 '[<a href="'. FS_PATH . 'plugins/disableseats/index.php?showid='.$sh['id'].'">','</a>]');
     echo '</p>';

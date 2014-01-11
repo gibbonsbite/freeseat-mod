@@ -320,7 +320,7 @@ img.ticketsponsors {
 
 /* if we put a p into each li then only the bullet will be coloured */
 ul li {
-     color:#99cce5;
+list-style-type:none;
 }
 
 

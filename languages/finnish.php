@@ -38,7 +38,7 @@ $lang["ccard_partner"] = 'Credit card payment made secure by&nbsp;%1$s';
 $lang["change_date"] = 'Muuta näytöstä';
 $lang["change_pay"] = 'Muuta %1$sHenkilö ja maksutietoja%2$s';
 $lang["change_seats"] = 'Muuta %1$sPaikan valintaa%2$s';
-$lang["check_st_update"] = 'Varmista että allaoleva lista varauksista jotka %1$s on oikein ja paina Varmista tämän sivun alalaidasta';
+$lang["check_st_update"] = 'Tarkista että alla oleva lista varauksista on oikein ja paina Varmista';
 $lang["choose_show"] = 'Valitse esitys';
 $lang["city"] = 'Kaupunki';
 $lang["comment"] = 'Kommentti';
@@ -214,7 +214,7 @@ $lang["is_not_default"] = 'Tämä ei ole valittu näytös.';
 
 $lang["lastname"] = 'Sukunimi';
 $lang["legend"] = 'Paikat: ';
-$lang["link_bookinglist"] = 'Varauslista';
+$lang["link_bookinglist"] = 'Varauslistaan';
 $lang["link_edit"] = 'Muokkaa näytöksiä';
 $lang["link_index"] = 'Etusivulle';
 $lang["link_pay"] = 'Henkilötiedot';
@@ -240,7 +240,7 @@ EOD;
 $lang["mail-booked"] = <<<EOD
 Kiitos varauksestanne %1\$s
 
-Tässä varauksenne tiedot, jotka täytyy esittää kassalla.
+Tässä varauksenne tiedot.
 
 EOD;
 
@@ -287,7 +287,6 @@ Jos ette vastaa, joudumme peruuttamaan varauksenne.
 EOD;
 
 $lang["mail-notconfirmed"] = <<<EOD
-Varaustanne ei ole vielä vahvistettu ; Liput oikeuttavat pääsyn elokuvaan vasta saatuamme maksun.
 EOD;
 
 // for one seat
@@ -388,7 +387,7 @@ $lang["notes-changed"] = 'Merkintöjä muutettu yhdelle varaukselle';
 $lang["notes-changed-p"] = 'Merkintöjä muutettu %1$d een varaukseen';
 $lang["nreduced"] = 'Alennettuun hintaan';
 
-$lang["orderby"] = 'Tilaa %1$s';
+$lang["orderby"] = 'Järjestys: %1$s';
 
 $lang["panic"] = <<<EOD
 <h2>EMME SAANEET VARAUSTANNE</h2>
@@ -406,8 +405,8 @@ $lang["pay_ccard"] = 'luottokortilla';
 $lang["pay_other"] = 'muu';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
-Liput täytyy maksaa viimeistään 30 minuuttia ennen näytöksen alkua, 
-tai joudumme peruuttamaan varauksen paikoista.
+Liput on lunastettava viimeistään 15 minuuttia ennen näytöksen alkua, 
+tai joudumme peruuttamaan varauksen.
 
 EOD;
 $lang["payinfo_ccard"] = <<<EOD
@@ -484,7 +483,7 @@ $lang["st_locked"] = 'Lukittu';
 $lang["st_notdeleted"] = 'Ei poistetut';
 $lang["st_paid"] = 'Maksetut';
 $lang["st_shaken"] = 'Muistutus lähetetty';
-$lang["st_tobepaid"] = 'Maksettavat';
+$lang["st_tobepaid"] = 'Varatut';
 $lang["stage"] = 'Valkokangas';
 $lang["summary"] = 'Tiedot';
 
