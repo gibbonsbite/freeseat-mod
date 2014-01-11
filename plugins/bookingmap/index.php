@@ -23,7 +23,7 @@ on the booking map.  Source: http://www.walterzorn.com
 */
 function print_end_zone() {
   global $table, $lang, $maxlen;
-  if ($table) echo "<tr><td colspan='$maxlen' align='center'><h4>".$lang["stage"]."</h4></table>";
+  if ($table) echo "</table>";
 }
 
 /** functions end here **/
@@ -118,7 +118,7 @@ while ($currseat) {
     /* 1. check we have a <table> */
     if (!$table) {
       /* this is the first (numbered) seat of the zone */
-      echo "<p class='main'><table class='seatmap' border='1'>";
+      echo "<p class='main'><table class='seatmap' border='1'><tr><td colspan='100%' align='center'><h4>".$lang["stage"]."</h4></tr></td>";
       $x=0;
       $y=-1;
       $even=false; //$staggered_seating;
