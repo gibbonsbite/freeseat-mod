@@ -25,7 +25,7 @@ function freeseat_plugin_init_barcode() {
 function barcode_link() {
   global $filtershow;
   if ($filtershow) {
-    echo "<ul><li><p class='main'><a href='plugins/barcode/?id=" . $filtershow . "' target='barcodescanner'>Scan Tickets</a> for this show.</p></ul>";
+    echo "<ul><li><p class='main'><a href='plugins/barcode/?id=" . $filtershow . "' target='barcodescanner'>Lue lipun viivakoodi</a></p></ul>";
   }
 }
 
