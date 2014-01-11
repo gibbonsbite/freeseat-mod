@@ -31,8 +31,8 @@ function extendbooking_process() {
 function extendbooking_button() {
   global $lang;
   
-  echo '<li><p class="main">';
+  echo '<ul><li><p class="main">';
   printf($lang["extendbooking_extend"],'<input type="submit" name="extend" value="','">');
-  echo '</p></li>';
+  echo '</p></li></ul>';
 }
 
