@@ -36,8 +36,8 @@ function price_to_string($price) {
     global $moneyfactor;
 
 //    return number_format((round($price))/$moneyfactor,2,'.','');
-	setlocale(LC_MONETARY,"fi_FI");
-	return money_format("%.2n", (round($price))/$moneyfactor);
+	setlocale(LC_MONETARY,"en_US");
+	return money_format("%!.2n EUR", (round($price))/$moneyfactor);
 }
 
 /** Convert a string representing an amount of $currency (eg "43.99")
@@ -45,7 +45,7 @@ function price_to_string($price) {
     database. */
 function string_to_price($price) {
     global $moneyfactor;
-
+ 
     return round(((real)$price)*$moneyfactor);
 }
 
