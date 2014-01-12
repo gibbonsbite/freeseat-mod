@@ -21,10 +21,10 @@ function freeseat_plugin_init_htmltickets() {
   $freeseat_plugin_hooks['ticket_finalise']['htmltickets'] = 'htmltickets_end';
 }
 
-function htmltickets_intro() {
-  global $lang;
-  echo '<p class="main"><b>'.$lang["intro_finish"].'</b></p>';
-}
+//function htmltickets_intro() {
+//  global $lang;
+//  echo '<p class="main"><b>'.$lang["intro_finish"].'</b></p>';
+//}
 
 /** print a ticket. $booking is an associative array with information
  * about this specific booking (seat number, seat class, etc, as well as 
