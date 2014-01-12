@@ -30,7 +30,7 @@ $lang["buy"] = '%1$sVaraa%2$s lippuja';
 $lang["cancel"] = "Peruuta";
 $lang["cancellations"] = "Peruutukset";
 $lang["cat"] = 'Hinta';
-$lang["cat_free"] = 'Ilmainen';
+$lang["cat_free"] = 'Ilmaisia';
 $lang["cat_normal"] = 'Normaali ';
 $lang["cat_reduced"] = 'Alennus ';
 $lang["ccard_failed"] = '%1$s WHILE PROCESSING A CREDIT CARD NOTIFICATION\n\n\n';
@@ -402,7 +402,7 @@ EOD;
 $lang["params"] = 'Muokkaa %1$sjärjestelmän asetuksia%2$s';
 $lang["pay_cash"] = 'kassalla';
 $lang["pay_ccard"] = 'luottokortilla';
-$lang["pay_other"] = 'muu';
+$lang["pay_other"] = 'maksettu';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
 Liput on lunastettava viimeistään 15 minuuttia ennen näytöksen alkua, 

@@ -29,7 +29,7 @@ function autopay_checkbox() {
     if (isset($_SESSION["autopay"]) and $_SESSION["autopay"]) {
       echo ' checked="checked"';
     }
-    echo '> Mark tickets as paid</p>';
+    echo '> Merkkaa maksetuiksi</p>';
   }
 }
 

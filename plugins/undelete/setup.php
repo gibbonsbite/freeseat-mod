@@ -97,7 +97,7 @@ function undelete_buttons() {
     echo '</p></ul>';
     break;
   case 0:
-    echo '<ul><li><p class="main">('.$lang["rebook-info"].')</p></ul>';
+    //echo '<ul><li><p class="main">('.$lang["rebook-info"].')</p></ul>';
   }
 }
 
