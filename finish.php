@@ -129,8 +129,11 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
    more than one plugin requests overriding ticket rendering, all such
    plugins will be run side by side. */
 
-   //$hide_tickets = do_hook_exists('ticket_prepare_override');
+   if (admin_mode()) {
+   $hide_tickets = do_hook_exists('ticket_prepare_override');
+   } else {
   $hide_tickets = true; // Don't let customer print tickets
+  }
   foreach ($_SESSION["seats"] as $n => $s) {
     do_hook_function('ticket_render_override', array_union($_SESSION,$s));
   }
@@ -143,8 +146,7 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
     }
     do_hook('ticket_finalise');
   }
-
-  echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
+if (!admin_mode()) echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
 
   /* Now send a confirmation message if that hasn't been done already. */
 if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
@@ -191,7 +193,7 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
   echo '<p class="main">'.$lang["mail-sent"].'</p>';
 } 
  print_legal_info();
- if (!$allpaid) {
+ if (!$allpaid && !admin_mode()) {
    echo '<p class="main">'.$lang["mail-notconfirmed"].'</p>';
 
 /* Now display some information about how to pay */
