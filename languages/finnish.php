@@ -120,7 +120,7 @@ $lang["expired"] = 'vanhentunut';
 
 $lang["failure"] = 'PANIC';
 $lang["file"] = 'Tiedosto: '; 
-$lang["filter"] = 'Näytös:'; // filter form header in bookinglist
+$lang["filter"] = 'Tila:'; // filter form header in bookinglist
 $lang["firstname"] = 'Etunimi';
 $lang["from"] = ''; // in a temporal sense : from a to b
 
