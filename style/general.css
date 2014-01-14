@@ -167,6 +167,12 @@ div.bookid {
     padding-bottom: 3em;
 }
 
+div.adminlogin {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
 @media print { 
   div.dontprint {
                   display : none;
@@ -228,7 +234,7 @@ div.image-selection{
 div.narrow {
 /*    background:  url(reservations/affiche.jpeg) no-repeat; */
 position: relative;
-width: 800px;
+width: 900px;
     margin-left:auto;
 	margin-right:auto;
 /*    float: right; */
@@ -237,7 +243,7 @@ width: 800px;
 div.wide {
 /*    background:  url(reservations/affiche.jpeg) no-repeat; */
 position: relative;
-width: 1000px;
+width: 900px;
     margin-left:auto;
 	margin-right:auto;
 /*    float: right; */

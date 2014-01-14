@@ -115,10 +115,9 @@ function show_foot() {
 <br style="clear:both;">
 
 <div class='dontprint'>
-<div id="trailerboard">
 <!--hr style="width:100%;"--> 
 <!--/div-->
-<div class='dontprint' style='float:left'>
+<div class='adminlogin'>
 <form action='<?php echo freeseat_url("index.php", true); ?>' method='post'>
 <p class='fine-print'>
 <?php
@@ -132,8 +131,7 @@ if (admin_mode()) {
 <?php } ?>
 </p>
 </form>
-</div>
-    <div class="dontprint"><div class="ad"><p class="fine-print">
+<div class="dontprint"><div class="ad"><p class="fine-print">
 (<?php
  /* NOTE - Please don't remove the link to the project page when
  running your ticketing site (You may move the link around though).
@@ -141,14 +139,13 @@ if (admin_mode()) {
  Leaving that tiny ad in place just increases chances more people use
  it and therefore motivates me to support it further :) Thanks */
     printf($lang["poweredby"],'<a href="http://freeseat.sf.net" target="_blank">FreeSeat</a>');
-?>)</p></div></div>
+?>)</p></div></div></div>
 
 <?php
     if ($footerpage) {
 	include (FS_PATH . $footerpage);
     }
 ?>
-</div><!--end of trailerboard-->
 </body>
 </html>
 <?php
