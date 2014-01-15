@@ -411,7 +411,7 @@ if ($ab) {
   if ($setstate==ST_PAID)
     echo '<p class="main">'.$lang["total"].'&nbsp;:'.price_to_string($total).'</p>';
 
-  //echo '<p class="main"><input type="submit" value="'.$lang["confirmation"].'">';
+  echo '<p class="main"><input type="submit" value="'.$lang["confirmation"].'">';
   do_hook('bookinglist_process'); // When admin presses print, bookings are confirmed
   do_hook('bookinglist_pagebottom');
   echo '<a href="bookinglist.php';
