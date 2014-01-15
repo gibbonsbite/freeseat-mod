@@ -515,7 +515,7 @@ $lang["warn_show_confirm"] = 'Varmistakaa että ylläolevat tiedot ovat oikein. Jo
 $lang["warn_spectacle"] = 'Muista, että salikarttoja ei voi muuttaa näytösten luonnin jälkeen.';
 $lang["we_accept"] = "Hyväksymme"; // credit card logos come after that
 $lang["weekdays"] = array("Sunnuntai","Maanantai","Tiistai","Keskiviikko","Torstai","Perjantai","Lauantai");
-$lang["workingdays"] = 'arkipäivät';
+$lang["workingdays"] = 'arkipäivää';
 
 $lang["youare"] = 'Henkilötiedot:';
 
