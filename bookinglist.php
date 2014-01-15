@@ -1,3 +1,5 @@
+<script src="/jquery/jquery.min.js"></script>
+<script src="js/checkall.js"></script>
 <?php
 
 /**                               **\
@@ -339,7 +341,7 @@ if ($ab) {
     if ($st!=ST_PAID) $total += $itemprice;
     if ($checkboxes) {
       if (($filterst==ST_DELETED) || ($st!=ST_DELETED))
-	$html[$st] .= '<input type="checkbox" name="'.$id.'">';
+	$html[$st] .= '<input type="checkbox" class="chkboxes" name="'.$id.'">';
     } else {
       // when no checkboxes we secretly check them all
       $html[$st] .= '<input type="hidden" name="'.$id.'">';
@@ -400,6 +402,7 @@ if ($ab) {
 
   if ($checkboxes) {
     if ($filterst != ST_DELETED) {
+	  echo'<input type="checkbox" class="chkall" label="check all"  />Valitse kaikki';
       echo '<ul><li><p class="main">'.$lang["set_status_to"];
       echo '<input type="submit" name="confirm" value="'.$lang["acknowledge"].'"> ';
       echo '<input type="submit" name="delete" value="'.$lang["DELETE"].'"> ';
