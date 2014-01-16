@@ -36,8 +36,8 @@ $lang["cat_reduced"] = 'Alennus ';
 $lang["ccard_failed"] = '%1$s WHILE PROCESSING A CREDIT CARD NOTIFICATION\n\n\n';
 $lang["ccard_partner"] = 'Credit card payment made secure by&nbsp;%1$s';
 $lang["change_date"] = 'Muuta näytöstä';
-$lang["change_pay"] = 'Muuta %1$sHenkilö ja maksutietoja%2$s';
-$lang["change_seats"] = 'Muuta %1$sPaikan valintaa%2$s';
+$lang["change_pay"] = 'Muuta %1$syhteystietoja%2$s';
+$lang["change_seats"] = 'Muuta %1$spaikkaa%2$s';
 $lang["check_st_update"] = 'Tarkista että alla oleva lista varauksista on oikein ja paina Varmista';
 $lang["choose_show"] = 'Valitse esitys';
 $lang["city"] = 'Kaupunki';
@@ -90,7 +90,7 @@ $lang["err_ic_showid"] =  'Kaikki valitut varaukset eivät ole samaan näytökseen.
 $lang["err_noaddress"] = 'Luottokorttimaksua käyttäessä täytyy täyttää vähintään sähköpostiosoite, lähiosoite, postinumero sekä postitoimipaikka.';
 $lang["err_noavailspec"] = 'Ei elokuvia'; // § NEW IN 1.2.2b
 $lang["err_nodates"] = 'Elokuvaan ei löytynyt näytöksiä.';
-$lang["err_noname"] = 'Täytä vähintään etu ja sukunimi';
+$lang["err_noname"] = 'Täytä vähintään etu-ja sukunimi';
 $lang["err_noprices"] = 'Tähän näytökseen ei ole määritelty hintaa.';
 $lang["err_noseats"] = 'Ei paikkoja'; // § NEW
 $lang["err_nospec"] = 'Täytä elokuvan nimi.';
@@ -142,7 +142,7 @@ $lang["intro_ccard"] = <<<EOD
 <p class="main">Paikat ovat nyt varattu nimellänne</p>
 EOD;
 
-$lang["intro_confirm"] = 'Tarkista ja tee tarpeelliset muutokset ennen varauksen varmistamista';
+$lang["intro_confirm"] = 'Tarkista tiedot ja paina Tee varaus.';
 $lang["intro_finish"] = 'Tämä on lippusi. Tulosta se ja tuo mukanasi kassalle.';
 $lang["intro_params"] = <<<EOD
 <h2>Maksutapojen saatavuus</h2>
@@ -444,7 +444,7 @@ $lang["reduction_or_charges"] = 'Lisämaksut';
 $lang["remail"] = 'Katosiko lippusi? Löydät ne seuraavasta linkistä: %1$sLippujen nouto%2$s';
 $lang["reminders"] = 'Muistutukset';
 $lang["reqd_info"] = <<<EOD
-Sinun täytyy täyttää vähintään etu ja sukunimi tehdessäsi varausta.
+Täytä vähintään etu-ja sukunimi alla oleviin kenttiin.
 Jos annat sähköpostiosoitteen, saat varaustiedot myös sähköpostitse.
 EOD;
 $lang["reserved-header"] = 'Salikartta';
