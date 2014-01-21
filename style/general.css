@@ -145,9 +145,10 @@ p.temph {
  }
 
 p.ticketdate { 
-    margin-left : 2em;
+    margin-left : 0;
     font-weight : bolder;
     font-style : oblique;
+	line-height:0;
  }
 
 /* Prices in the summary of booked tickets. */
@@ -251,11 +252,11 @@ width: 900px;
 }
 
 div.ticket { 
-border : 1px;
-border-style : dashed;
-margin-bottom : 1em;
-padding-left : 1em;
-padding-right : 1em;
+height: 140px;
+width: 360px;
+margin-bottom : 0;
+padding-left : 0;
+padding-right : 0;
 page-break-inside : avoid;
 overflow: hidden;
 }

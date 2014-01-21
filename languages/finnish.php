@@ -514,7 +514,7 @@ $lang['warn_process_payment'] = 'Maksunne käsittelyssä tapahtui virhe. Ottakaa y
 $lang["warn_show_confirm"] = 'Varmistakaa että ylläolevat tiedot ovat oikein. Jos haluat tehdä muutoksia, paina Muokkaa painiketta. Kun olet valmis, paina Tallenna.';
 $lang["warn_spectacle"] = 'Muista, että salikarttoja ei voi muuttaa näytösten luonnin jälkeen.';
 $lang["we_accept"] = "Hyväksymme"; // credit card logos come after that
-$lang["weekdays"] = array("Sunnuntai","Maanantai","Tiistai","Keskiviikko","Torstai","Perjantai","Lauantai");
+$lang["weekdays"] = array("SU","MA","TI","KE","TO","PE","LA");
 $lang["workingdays"] = 'arkipäivää';
 
 $lang["youare"] = 'Henkilötiedot:';

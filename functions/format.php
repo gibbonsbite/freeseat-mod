@@ -162,10 +162,11 @@ function f_date($d) {
 
   $weekday = $lang["weekdays"][(int)strftime("%w",$t)];
   $day = (int)substr($d, 8, 2);
-  $month = $lang["months"][(int)substr($d,5,2)];
+// $month = $lang["months"][(int)substr($d,5,2)];
+	$month = (int)substr($d,5,2);
   $year = (int)substr($d, 0, 4);
 
-  return "$weekday $day $month $year";
+  return "$weekday $day.$month.$year";
 }
 
 /* converts a mysql time into a user friendly time */
@@ -552,14 +553,14 @@ function send_notifs() {
       $mailto = $bs[0]['email'];
     }
     $paidnow = filter_seats($bs,ST_PAID);
-    if (count($paidnow)) {
-      $somepaid = true;
-      $body.= "\n";
+    //if (count($paidnow)) {
+//      $somepaid = true;
+      //$body.= "\n";
       //      $plur=count($paidnow)>1?"s":"";
-      $body.= (count($paidnow)>1?$lang["mail-gotmoney-p"]:$lang["mail-gotmoney"])."\n";
-      $body.= print_booked_seats($paidnow,FMT_SHOWID|FMT_SHOWINFO);
-      $subject = $lang["mail-sub-gotmoney"];
-    }
+      //$body.= (count($paidnow)>1?$lang["mail-gotmoney-p"]:$lang["mail-gotmoney"])."\n";
+      //$body.= print_booked_seats($paidnow,FMT_SHOWID|FMT_SHOWINFO);
+      //$subject = $lang["mail-sub-gotmoney"];
+    //}
     $dltd = filter_seats($bs,ST_DELETED);
     $countdltd = count($dltd);
     if ($countdltd) {
