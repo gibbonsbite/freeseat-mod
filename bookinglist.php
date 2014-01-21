@@ -39,6 +39,7 @@ require_once (FS_PATH . "functions/session.php");
 require_once (FS_PATH . "functions/seat.php");
 require_once (FS_PATH . "functions/send.php");
 require_once (FS_PATH . "functions/tools.php");
+require_once (FS_PATH . "functions/spectacle.php");
 
 db_connect();
 

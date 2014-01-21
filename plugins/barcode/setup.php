@@ -30,7 +30,7 @@ function barcode_link() {
 }
 
 function barcode_ticket_left($booking) {
-  echo "<img height=150 src='".freeseat_url("plugins/barcode/barcode.php?code=")
+  echo "<img height=140 src='".freeseat_url("plugins/barcode/barcode.php?code=")
     .str_pad($booking["bookid"],12,"0",STR_PAD_LEFT)
     ."&amp;encoding=EAN&amp;scale=2&amp;mode=png'>";
 

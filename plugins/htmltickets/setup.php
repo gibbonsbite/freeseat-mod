@@ -36,21 +36,24 @@ function htmltickets_body($booking) {
 
   if (!do_hook_exists('ticket_left',$booking)) {
     /* If no one provides a replacement for book id display... */
-    echo "<p>".$booking["bookid"] /*."<br>";
-    echo $booking["bookid"]."<br>";
-    echo $booking["bookid"]*/."</p>";
+//    echo "<p>".$booking["bookid"] /*."<br>";
+//    echo $booking["bookid"]."<br>";
+//    echo $booking["bookid"]*/."</p>";
   }
   echo "</div>";
-  echo "<p><img class='ticketsponsors' src='".FS_PATH . $ticket_logo."'></p>";
-
-  $oneline = array($booking);
-  echo print_booked_seats($oneline,FMT_NOCOUNT|FMT_PRICE|FMT_HTML);
-
-  show_user_info(false,$booking);
-
+  if (!$sh) $sh = get_show($booking["showid"]);
+  $spectacleid = $sh["spectacleid"];
+  $spec = get_spectacle($spectacleid);
+  printf(htmlspecialchars($spec["name"])); //print movie name
+  //echo "<p><img class='ticketsponsors' src='".FS_PATH . $ticket_logo."'></p>";
   echo "<p class='ticketdate'>";
   show_show_info(get_show($booking["showid"]),false);
   echo "</p>\n";
+  
+  show_user_info(false,$booking);
+
+  $oneline = array($booking);
+  echo print_booked_seats($oneline,FMT_NOCOUNT|FMT_PRICE|FMT_HTML);
 
   echo '</div>';
 }
