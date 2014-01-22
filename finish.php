@@ -129,7 +129,7 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
    more than one plugin requests overriding ticket rendering, all such
    plugins will be run side by side. */
 
-   if (admin_mode()) {
+   if (admin_mode() & $_SESSION["autopay"]) {
    $hide_tickets = do_hook_exists('ticket_prepare_override');
    } else {
   $hide_tickets = true; // Don't let customer print tickets
