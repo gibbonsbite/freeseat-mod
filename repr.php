@@ -173,9 +173,9 @@ if (admin_mode()) echo '<input type="submit" value='.$lang["save"].'></form>';
 
 echo '<p class="main">';
 if ($allshown && admin_mode()) {
-printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="/booking/repr.php?spectacleid='.$spectacleid.'">','</a>]');
+printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="/repr.php?spectacleid='.$spectacleid.'">','</a>]');
 } elseif (admin_mode()) {
-printf('<p class="main">'.$lang["showallspec"].'</p>','[<a href="/booking/repr.php?spectacleid='.$spectacleid.'&nohide">','</a>]');
+printf('<p class="main">'.$lang["showallspec"].'</p>','[<a href="/repr.php?spectacleid='.$spectacleid.'&nohide">','</a>]');
 }
 printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
 echo '</p>';
