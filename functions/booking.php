@@ -165,7 +165,7 @@ function process_ccard_transaction($groupid,$transid,$amount) {
 
   $success = true; // let's be optimistic
 
-  start_notifs();
+  //start_notifs();
 
   mysql_query("insert into ccard_transactions (groupid,numxkp,amount) values ($groupid,".quoter($transid).",".$amount.")");
   if (mysql_affected_rows()!=1) {
@@ -209,7 +209,7 @@ function process_ccard_transaction($groupid,$transid,$amount) {
 		   $currency));
     $success = false;
   }
-  send_notifs(); // Should we tell the user what's going on in case
+  //send_notifs(); // Should we tell the user what's going on in case
                  // things went bad?
   return $success;
 }

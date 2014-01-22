@@ -117,13 +117,13 @@ foreach ($_POST as $key => $value) {
 $setstate = 0;
 if (isset($_POST["setstate"]) && (($_POST["setstate"] == ST_DELETED) || ($_POST["setstate"] == ST_PAID))) {
   $setstate = (int)$_POST["setstate"];
-  start_notifs();
+  //start_notifs();
 
   foreach($ab as $book) {
     set_book_status($book,$setstate);
   }
 
-  send_notifs($setstate);
+  //send_notifs($setstate);
   $setstate = 0;
  } else if (isset($_POST["confirm"])) {
   $setstate = ST_PAID;

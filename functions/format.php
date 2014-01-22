@@ -525,12 +525,13 @@ send_notifs();
 This is to have a single email send to a given email address in case
 it is affected by many changes.
 **/
-function start_notifs() {
+
+/* function start_notifs() {
   $_SESSION["mailings"] = array();
-}
+} */
 
 /** (Returns the number of emails sent) */
-function send_notifs() {
+/* function send_notifs() {
   global $smtp_sender,$admin_mail,$unsecure_login,$auto_mail_signature,$lang;
   $sentmails = 0;
   $c = get_config();
@@ -571,9 +572,9 @@ function send_notifs() {
       } else {
 	$body.= ($countdltd>1?$lang["mail-cancel-p"]:$lang["mail-cancel"]);
       }
-      /* Should we distinguish between manual deletion and automatic
-       * deletion? (Automatic is done when it stayed unpaid for too
-       * long) */
+      // Should we distinguish between manual deletion and automatic
+      // deletion? (Automatic is done when it stayed unpaid for too
+      // long)
       $body.= "\n\n";
       $body.= print_booked_seats($dltd,FMT_SHOWID|FMT_SHOWINFO);
       $body.= $lang["mail-oops"]."\n";
@@ -581,20 +582,19 @@ function send_notifs() {
     }
 
     if (!($somepaid || $somedeleted)) {
-      /** We get here if the only thing to say is a reminder */
+      // We get here if the only thing to say is a reminder
       $countbs=count($bs);
       $body.= sprintf(($countbs>1?$lang["mail-heywakeup-p"]:$lang["mail-heywakeup"]),
 		      print_booked_seats(filter_seats($bs,ST_SHAKEN),FMT_PRICE|FMT_SHOWID|FMT_SHOWINFO));
 
       $subject = $lang["mail-sub-heywakeup"];
     } else {
-      /** Now that the main topic of the mail is done we also show
-      some reminders. First, what has already been booked and paid */
+      // Now that the main topic of the mail is done we also show
+      // some reminders. First, what has already been booked and paid
       $allpaid = get_bookings("booking.$crit='".$bs[0][$crit].($crit=="firstname"?"' and booking.lastname='".$bs[0]["lastname"]:"")."' and state=".ST_PAID." and date >= curdate()");
       $countpaid = count($allpaid);
       if ($countpaid>count($paidnow)) {
-	/* (Otherwise it would just amount to showing the same info
-	twice) */
+	// (Otherwise it would just amount to showing the same info twice)
 	$body.= "\n";
 	if ($somedeleted)
 	  $body.= $countpaid>1?$lang["mail-notdeleted-p"]:$lang["mail-notdeleted"];
@@ -624,7 +624,7 @@ function send_notifs() {
 
   unset($_SESSION["mailings"]);
   return $sentmails;
-}
+} */
 
 /** Helper function: Return a portion of an email to be sent to the
 user, notifying him of changes in his bookings. Only the part of $data

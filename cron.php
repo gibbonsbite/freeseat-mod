@@ -57,8 +57,6 @@ if (isset($_SERVER["REQUEST_METHOD"]) && !$unsecure_login) {
 
   $c = get_config();
 
-  start_notifs();
-
   $del_count = 0;
   $shake_count = 0;
 
@@ -98,7 +96,6 @@ are fairly old */
       }
     }
   }
-  $mail_count = send_notifs();
 
   if ($del_count)
     echo "delete $del_count ";
