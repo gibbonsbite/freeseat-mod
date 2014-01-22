@@ -238,7 +238,8 @@ EOD;
  in the spectacle name and alter/extended it when needed (e.g. French
  de+le = du, German von+dem = vom, etc) */
 $lang["mail-booked"] = <<<EOD
-Kiitos varauksestanne %1\$s
+Kiitos varauksestanne elokuvaan
+%1\$s
 
 Tässä varauksenne tiedot.
 

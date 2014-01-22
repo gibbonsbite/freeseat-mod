@@ -155,7 +155,7 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
   $body .= "\n";
   // TODO - BUG - $_SESSION["seats"] don't have the correct
   // date/time/theatrename fields
-  $body .= print_booked_seats(null,FMT_PRICE|FMT_SHOWID|FMT_SHOWINFO);
+  $body .= print_booked_seats(null,FMT_SHOWINFO);
   $body .= "\n";
   if (!$allpaid) {
     $body .= $lang["mail-notconfirmed"];
