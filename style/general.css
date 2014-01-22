@@ -145,7 +145,7 @@ p.temph {
  }
 
 p.ticketdate { 
-    margin-left : 0;
+    left : 0;
     font-weight : bolder;
     font-style : oblique;
 	line-height:0;
@@ -164,8 +164,8 @@ p.warning {
 
 div.bookid { 
     float: left;
-    padding-right: 2em;
-    padding-bottom: 3em;
+    padding-right: 5px;
+    padding-bottom: 0;
 }
 
 div.adminlogin {
@@ -253,7 +253,7 @@ width: 900px;
 
 div.ticket { 
 height: 140px;
-width: 360px;
+width: 400px;
 margin-bottom : 0;
 padding-left : 0;
 padding-right : 0;

@@ -238,7 +238,7 @@ EOD;
  in the spectacle name and alter/extended it when needed (e.g. French
  de+le = du, German von+dem = vom, etc) */
 $lang["mail-booked"] = <<<EOD
-Kiitos varauksestanne elokuvaan
+Kiitos varauksestanne elokuvaan:
 %1\$s
 
 Tässä varauksenne tiedot.
@@ -358,7 +358,7 @@ Jos uskot tämän olevan virhe, vastatkaa tähän sähköpostiin tai soittakaa kassall
 EOD;
     //'
 
-$lang["mail-sent"] = 'Sinulle on juuri lähetetty sähköposti, joka sisältää kaikki tiedot tältä sivulta.';
+$lang["mail-sent"] = 'Sinulle on lähetetty sähköposti varaustiedoillanne. Tarkista roskapostikansio!';
 $lang["mail-sub-booked"] = 'Varauksenne';
 $lang["mail-sub-cancel"] = 'Varauksen peruutus';
 $lang["mail-sub-gotmoney"] = 'Maksun hyväksyntä';
