@@ -155,7 +155,6 @@ if(isset($_GET['nohide'])) {
 
   if ($remaining<=0 && admin_mode() && $allshown){
     echo " (".$lang["book_adminonly"].")";
-	printf($lang["bookingmap"],'[<a href="'. FS_PATH . 'plugins/bookingmap/?showid='.$sh['id'].'">','</a>]');
 	}
 	
     
