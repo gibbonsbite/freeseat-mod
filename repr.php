@@ -129,10 +129,10 @@ if(isset($_GET['nohide'])) {
     echo "<li><p>";
   
   if ($remaining>0 && admin_mode())
-    echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
+    echo "($bk/$tot) [<a href='bookinglist.php?st=2&showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
 	
   if ($remaining<=0 && admin_mode() && $allshown)
-    echo "($bk/$tot) [<a href='bookinglist.php?showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
+    echo "($bk/$tot) [<a href='bookinglist.php?st=2&showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
 
   if ($remaining>0 || admin_mode() && $allshown) {
     echo "[<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>]";
