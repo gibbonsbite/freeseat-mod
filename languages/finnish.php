@@ -23,7 +23,7 @@ $lang["bookid"] = 'Koodi';
 $lang["book_adminonly"] = 'Varaus suljettu';
 $lang["book_submit"] = 'Tee varaus';
 $lang["booking_st"] = 'Varaukset tilassa %1$s';
-$lang["bookinglist"] = 'Selaa/Muokkaa %1$svarauksia%2$s (mm. maksun hyväksymiseen)';
+$lang["bookinglist"] = 'Selaa/Muokkaa %1$svarauksia%2$s';
 $lang["bookingmap"] = 'Varauskartta';
 $lang["buy"] = '%1$sVaraa%2$s lippuja';
 
@@ -62,7 +62,7 @@ $lang["disabled"] = "Suljettu"; // for shows or payment methods
 $lang["dump_csv"] = 'Tietokanta CSV-muodossa: %1$sbookings.csv%2$s';
 
 $lang['editshows'] = 'Lisää tai muokkaa %1$selokuvan%2$s tietoja';
-$lang["email"] = 'Email';
+$lang["email"] = 'Sähköpostiosoite';
 $lang["err_bademail"] = 'Sähköpostiosoite ei ole hyväksytyssä muodossa';
 $lang["err_badip"] = 'Sinulla ei ole pääsyoikeuksia tähän tiedostoon';
 $lang["err_badkey"] = 'Pääsyavain on väärä. Yritä uudelleen. (Lähetä sähköpostia %1$s jos et hallinnoi)';
@@ -471,7 +471,7 @@ $lang["show_name"] = 'Elokuvan nimi';
 $lang["show_not_stored"] = 'Muutoksia ei voitu tallentaa. Ottakaa yhteys järjestelmän ylläpitäjään.';
 $lang["show_stored"] = 'Muutokset tallennettu.';
 $lang["showallspec"] = 'Näytä %1$skaikki%2$s'; // §NEW IN 1.2.2b (that's "%1$s show all %2$s" without the spaces)
-$lang["showlist"] = '%1$s elokuvat';
+$lang["showlist"] = '%1$s näytökset';
 $lang["spectacle_name"] = 'Valitse elokuva';
 $lang["state"] = 'Tila'; // in the sense of status, not in the sense
 			  // of a country's part
