@@ -116,9 +116,9 @@ function book($glob,$seat) {
     ($seat["cat"]==CAT_FREE?ST_PAID:ST_BOOKED);
 
   if (mysql_query($query.
-		  $glob["showid"].','.$seat["id"].','.$state.','.$seat["cat"].',"'.
-		  mysql_real_escape_string($glob["firstname"]).'","'.
-		  mysql_real_escape_string($glob["lastname"]).'","'.
+		  $glob["showid"].','.$seat["id"].','.$state.','.$seat["cat"].',upper("'.
+		  mysql_real_escape_string($glob["firstname"]).'"),upper("'.
+		  mysql_real_escape_string($glob["lastname"]).'"),"'.
 		  mysql_real_escape_string($glob["email"]).'","'.
 		  mysql_real_escape_string($glob["phone"]).'",NOW(),'.
 		  $glob["payment"].',"'.
