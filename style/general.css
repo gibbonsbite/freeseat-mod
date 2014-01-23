@@ -136,6 +136,13 @@ p.main {
     margin-right : 3em;
     text-align : justify;
   }
+  
+p.main_red {
+    margin-left : 2em;
+    margin-right : 3em;
+    text-align : justify;
+	color: red;
+ }
 
 /* emph in a table */
 p.temph { 
@@ -253,7 +260,7 @@ width: 900px;
 
 div.ticket { 
 height: 140px;
-width: 400px;
+width: 600px;
 margin-bottom : 0;
 padding-left : 0;
 padding-right : 0;
