@@ -173,14 +173,12 @@ if (payment_open($sh,PAY_CCARD)) {
 
 echo '<h2>'.$lang["youare"].'</h2>';
 echo '<p class="main">'.$lang["reqd_info"].'</p>';
-echo '<p class="main">';
-input_field("firstname");
-echo ' ';
-input_field("lastname");
+echo '<p class="main_red">';
+echo '*'.$lang["firstname"].': <input type="text" name="firstname" maxlength="15"> ';
+echo '*'.$lang["lastname"].': <input type="text" name="lastname" maxlength="15">';
 echo '</p><p class="main">';
-input_field("phone");
-echo ' ';
-input_field("email");
+echo ''.$lang["phone"].': <input type="text" name="phone" maxlength="14"> ';
+echo ''.$lang["email"].': <input type="text" name="email">';
 echo '</p><p class="main">';
 input_field("address",""," size=60");
 echo '</p><p class="main">';
