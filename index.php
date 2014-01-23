@@ -78,7 +78,7 @@ foreach ($ss as $s) {
 
   echo '<tr>';
   if ($s['imagesrc']) {
-    echo '<td class="showlist">'.$linkl.'<img src="'.$upload_path.$s['imagesrc']. '">'.$linkr.'</td>';
+    echo '<td class="showlist">'.$linkl.'<img src="'.$upload_path.$s['imagesrc']. '" height="300">'.$linkr.'</td>';
   }
 
   /** WARN - we assume whoever filled the description field to be
