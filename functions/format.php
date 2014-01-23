@@ -484,9 +484,10 @@ function show_optional($data,$f) {
 function show_user_info($full = true,$data = null) {
   global $lang;
   if (!$data) $data = $_SESSION;
-
-  echo "<p class='main'><b>".$lang["name"]."&nbsp;:</b> ".$data["firstname"]." ".$data["lastname"]."</p>";
-  if ($full) {
+if (!$full) {
+  echo "<p class='fine-print'>".$data["firstname"]." ".$data["lastname"]."</p>";
+  } else {
+    echo "<p class='main'><b>".$lang["name"]."&nbsp;:</b> ".$data["firstname"]." ".$data["lastname"]."</p>";
     echo '<p class="main">';
     show_optional($data,"phone");
     echo ' ';
