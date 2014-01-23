@@ -213,7 +213,12 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
    echo '</p>';
  } 
  echo '<div class="dontprint"><p class="main">';
- if (admin_mode()) printf($lang["bookagain"],'[<a href="repr.php">','</a> ]');
+ if (admin_mode()) {
+ printf($lang["bookagain"],'[<a href="repr.php">','</a>]');
+ echo '<br />';
+ printf($lang["bookinglist"],'[<a href="bookinglist.php?st=2">','</a>]');
+ echo '<br />';
+ }
  printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
  echo '</p></div>';
 
