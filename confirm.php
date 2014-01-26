@@ -8,6 +8,7 @@ require_once (FS_PATH . "functions/plugins.php");
 require_once (FS_PATH . "functions/format.php");
 require_once (FS_PATH . "functions/session.php");
 require_once (FS_PATH . "functions/tools.php");
+require_once (FS_PATH . "functions/spectacle.php");
 
 /** Copyright (C) 2010 Maxime Gamboni. See COPYING for
 copying/warranty info
@@ -106,10 +107,17 @@ if ($_SESSION["payment"]!=PAY_OTHER)  {
 
 show_head();
 
+check_session(1); // check showid
+$sh = get_show($_SESSION["showid"]);
+$spectacleid = $sh["spectacleid"]; // movie ID
+$spec = get_spectacle($spectacleid);
+
 echo '<p class="main">'.$lang["intro_confirm"].'</p>';
 echo '<h2>'.$lang["summary"].'</h2>';
 
 echo '<p class="main">';
+printf(htmlspecialchars($spec["name"])); // movie name
+echo '</p><p class="main">';
 show_show_info();
 echo '</p>';
 

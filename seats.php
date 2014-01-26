@@ -143,13 +143,14 @@ function seatcallback($currseat) {
   else
     $colour = "cls".$currseat['class'];
 
-  echo "<td colspan='2' align='center' class='$colour'><p>";
+  echo "<td colspan='2' align='center' class='$colour'><p class='seats'><label>";
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
     echo '<input type="checkbox" name="'.$currseat['id'].'"';
     if ($chkd) echo ' checked="checked"';
     echo '><br>';
   }
   echo $currseat['col'];
+  echo "</label>";
 }
 
 /* make_legend for unnumbered seats. */
@@ -186,6 +187,8 @@ db_connect();
     /* The following call makes sure all seats are in the theatre
        corresponding to the current show, but not whether they're
        available. check_seats() below does that work. */
+	$spectacleid = $sh["spectacleid"]; // movie ID
+	$spec = get_spectacle($spectacleid);
     load_seats($prevSelected);
     if (!check_seats())
       kaboom($lang["err_occupied"]);
@@ -198,7 +201,7 @@ db_connect();
 
     check_session(1); // check showid
     $sh = get_show($_SESSION["showid"]);
-	$spectacleid = $sh["spectacleid"]; // movie name
+	$spectacleid = $sh["spectacleid"]; // movie ID
 	$spec = get_spectacle($spectacleid);
     if (!check_seats())
       kaboom($lang["err_occupied"]);
@@ -213,7 +216,7 @@ show_head(true);
 
 echo '<h2>'.$lang["err_checkseats"].'</h2>'; // not an error - lang item is a bit misnamed
 echo '<p class="main">';
-printf(htmlspecialchars($spec["name"]));
+printf(htmlspecialchars($spec["name"])); // movie name
 echo '</p><p class="main">';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';

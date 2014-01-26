@@ -91,6 +91,10 @@ p {
     font-family: 'Oswald', sans-serif;
     color: black;
   }
+  
+  p.seats {
+    color: #F2F2F2;
+  }
 
 /* important pagewide (or almost) paragraph text, but in black and white */
 p.bwemph {
@@ -349,6 +353,8 @@ img.ticketsponsors {
 ul li {
 list-style-type:none;
 }
+
+label { display: inline-block; width: 100%; }
 
 
 /* "css popups" 
