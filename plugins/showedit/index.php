@@ -204,7 +204,7 @@ function set_dates($spec,$dates)
 		} else {
 		  $i = (int)$val['id'];
 		  if ($d=="'0000-00-00'") continue; // should maybe do a DELETE instead?
-		  $q ="UPDATE shows set time=$t, date=$d, theatre=$th where id=$i";
+		  $q ="DELETE from shows where id=$i";
 		}
 		if (! mysql_query( $q )) {
 			myboom("Problem when creating or updating show information.");
