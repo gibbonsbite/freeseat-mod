@@ -48,7 +48,7 @@ $lang["country"] = 'Maa';
 $lang["class"] = 'Tyyppi';
 $lang["closed"] = 'Suljettu';
 $lang["col"] = 'Paikka';
-$lang["create_show"] = 'Luo uusi esitys';
+$lang["create_show"] = 'Uusi elokuva';
 
 $lang["date"] = 'Pvm';
 $lang['datesandtimes'] = 'Näytökset';
