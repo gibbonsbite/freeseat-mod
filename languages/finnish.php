@@ -135,7 +135,7 @@ $lang['imagesrc'] = 'Kuvan sijainti';
 $lang["immediately"] = 'heti';
 $lang["import"] = 'Lähetä tämä tiedosto';
 $lang["in"] = '%1$s:ssa'; // as in "in <ten days>"
-$lang["index_head"] = 'Netti lipunvaraus';
+$lang["index_head"] = 'Studio 123 Järvenpää Lipunvaraus';
 $lang["intro_ccard"] = <<<EOD
  <h2>Kiitos varauksestanne</h2>
 
@@ -347,8 +347,12 @@ EOD;
 // following always plural
 $lang["mail-summary-p"] = 'Paikat jotka ovat varmistettuja (paitsi vanhoihin näytöksiin) ovat seuraavat:';
 
+$lang["admin-thankee"] = 'Varaus tallennettu.';
+
 $lang["mail-thankee"] = <<<EOD
-Kiitämme varauksestanne. Toivomme että nautitte elokuvasta!
+Kiitämme varauksestanne. Toivomme että nautitte elokuvasta!<br /><br />
+Liput voitte lunastaa kassallamme osoitteessa Helsingintie 12, Järvenpää.<br /><br />
+Jos tahdotte peruuttaa varauksenne, soittakaa kassamme aukioloaikana numeroon (09) 8366770.
 
 EOD;
 

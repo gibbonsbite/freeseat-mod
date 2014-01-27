@@ -146,7 +146,8 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
     }
     do_hook('ticket_finalise');
   }
-echo '<div class="dontprint"><p class="main"><b>'.$lang["mail-thankee"].'</b></p></div>';
+  if (admin_mode()) echo '<div class="dontprint"><p class="main"><b>'.$lang["admin-thankee"].'</b></p></div>';
+else echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
 
   /* Now send a confirmation message if that hasn't been done already. */
 if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
