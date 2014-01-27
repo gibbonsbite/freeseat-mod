@@ -33,10 +33,10 @@ $allshown = false;
 if (isset($_GET["spectacleid"]) && ($s = get_spectacle((int)($_GET["spectacleid"])))) {
   $ss = array($s);
 } else if (isset($_GET["nohide"])) {
-  $ss = fetch_all(mysql_query("select spectacles.* from shows,spectacles where spectacles.id=shows.spectacle group by spectacles.id order by date asc"));
+  $ss = fetch_all(mysql_query("select spectacles.* from shows,spectacles where spectacles.id=shows.spectacle group by spectacles.id order by date desc"));
   $allshown = true;
 } else {
-  $ss = fetch_all(mysql_query("select spectacles.* from shows,spectacles where date >= curdate() and spectacles.id=shows.spectacle group by spectacles.id order by date asc"));
+  $ss = fetch_all(mysql_query("select spectacles.* from shows,spectacles where date >= curdate() and spectacles.id=shows.spectacle group by spectacles.id order by date desc"));
 }
 
 if ($ss === false)
