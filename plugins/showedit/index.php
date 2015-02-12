@@ -517,8 +517,8 @@ echo '<tr><th>'. $lang["class"] . '<th>'.$lang["price"].'<th>'.$lang["price_disc
 for ( $i=1; $i<=4; $i++ ) { // class loop
 	if ($i==1) echo '<tr><td>Norm</td>';
 	if ($i==2) echo '<tr><td>3D</td>';
-	if ($i==3) echo '<tr><td>Ale1</td>';
-	if ($i==4) echo '<tr><td>Ale2</td>';
+	if ($i==3) echo '<tr><td>Ale</td>';
+	if ($i==4) echo '<tr><td>3D Ale</td>';
 	//echo '<tr><td>'. $i . '</td>';
 	for ( $j=CAT_NORMAL; $j>=CAT_REDUCED; $j-- ) { // cat loop
 		echo '<td>';
