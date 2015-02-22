@@ -57,7 +57,7 @@ $lang["day"] = 'pv.'; // abbreviated
 $lang["days"] = 'päivät';
 $lang["DELETE"] = 'Poista'; // used in check_st_update
 $lang["description"] = 'Kuvaus';
-$lang["diffprice"] = 'Hinnat ovat värikoodattu alla olevan listan mukaisesti';
+$lang["diffprice"] = '<strong><img src="/images/handicap.jpg"> paikat ovat pyörätuolipaikkoja</strong>';
 $lang["disabled"] = "Suljettu"; // for shows or payment methods
 $lang["dump_csv"] = 'Tietokanta CSV-muodossa: %1$sbookings.csv%2$s';
 

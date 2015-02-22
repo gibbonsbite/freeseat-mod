@@ -145,12 +145,16 @@ function seatcallback($currseat) {
 
   echo "<td colspan='2' align='center' class='$colour'><p class='seats'><label>";
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
-    echo '<input type="checkbox" name="'.$currseat['id'].'"';
+  	echo '<input type="checkbox" name="'.$currseat['id'].'"';
     if ($chkd) echo ' checked="checked"';
     echo '><br>';
   }
+  if ($currseat['col']=="INV") {
+  echo '<img src="/images/handicap.jpg">';
+  } else {
   echo $currseat['col'];
   echo "</label>";
+  }
 }
 
 /* make_legend for unnumbered seats. */
