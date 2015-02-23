@@ -57,6 +57,8 @@ display a seat of the given class on a seatmap */
 
 body {
     background: white;
+	background-image:url(http://studiot123.com/images/uploads/bg.jpg);
+	background-attachment: fixed;
   }
 /*body.narrow { 
     background:  url(reservations/affiche.jpeg) no-repeat;
@@ -173,6 +175,13 @@ p.warning {
     text-align : center;
   }
 
+div.warning {
+    background: rgba(255, 255, 255, 1);
+    width: 700px;
+    margin-left:auto;
+	margin-right:auto;
+  }
+
 div.bookid { 
     float: left;
     padding-right: 5px;
@@ -245,7 +254,7 @@ div.image-selection{
 }
 
 div.narrow {
-/*    background:  url(reservations/affiche.jpeg) no-repeat; */
+background: rgba(255, 255, 255, 1);
 position: relative;
 width: 700px;
     margin-left:auto;
@@ -254,7 +263,7 @@ width: 700px;
 }
 
 div.wide {
-/*    background:  url(reservations/affiche.jpeg) no-repeat; */
+background: rgba(255, 255, 255, 1);
 position: relative;
 width: 900px;
     margin-left:auto;
