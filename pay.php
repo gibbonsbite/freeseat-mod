@@ -55,9 +55,9 @@ show_head();
 
 echo '<h2>'.$lang["summary"].'</h2>';
 
-echo "<p>";
+echo "<p>Elokuva: ";
 printf(htmlspecialchars($spec["name"])); // the movie name is shown
-echo "</p><p>";
+echo "</p><p>N&auml;yt&ouml;s: ";
 show_show_info($sh);
 echo "</p>\n";
 
@@ -84,8 +84,8 @@ if ($discount_option) {
   echo '<p class="main">'.$lowpriceconditions.'</p>';
 }
 
-if (admin_mode())
-  $cats[CAT_FREE] = "cat_free";
+//if (admin_mode())
+  //$cats[CAT_FREE] = "cat_free";
 
 if (count($cats) > 1) {
   /* If neither of those two hold, the only option is normal mode... */
@@ -174,17 +174,26 @@ if (payment_open($sh,PAY_CCARD)) {
 echo '<h2>'.$lang["youare"].'</h2>';
 echo '<p class="main">'.$lang["reqd_info"].'</p>';
 echo '<p class="main_red">';
+
+if (admin_mode()) {
+echo '*'.$lang["firstname"].': <input type="text" name="firstname" value="Studio 123" maxlength="15"> ';
+echo '*'.$lang["lastname"].': <input type="text" name="lastname" value="Kassa" maxlength="15">';
+echo '</p><p class="main">';
+echo ''.$lang["email"].': <input type="text" name="email">';
+} else {
 echo '*'.$lang["firstname"].': <input type="text" name="firstname" maxlength="15"> ';
 echo '*'.$lang["lastname"].': <input type="text" name="lastname" maxlength="15">';
+echo '</p><p class="main_red">';
+echo '*'.$lang["email"].': <input type="text" name="email">';
 echo '</p><p class="main">';
 echo ''.$lang["phone"].': <input type="text" name="phone" maxlength="14"> ';
-echo ''.$lang["email"].': <input type="text" name="email">';
 echo '</p><p class="main">';
 input_field("address",""," size=60");
 echo '</p><p class="main">';
 input_field("postalcode",""," size=8");
 echo ' ';
 input_field("city",""," size=20");
+}
 // we will skip the us_state and/or country fields if the defaults are not set in config.php
 if ($pref_state_code != "")  {
 	echo '</p><p class="main">';
