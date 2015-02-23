@@ -67,7 +67,7 @@ function flush_messages_html() {
   global $messages;
   if (count($messages)) {
     foreach ($messages as $message) {
-      echo "<p class='warning'>" . htmlspecialchars($message) . "</p>";
+      echo "<div class='warning'><p class='warning'>" . htmlspecialchars($message) . "</p></div>";
     }
   }
   $messages = array();
