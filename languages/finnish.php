@@ -16,7 +16,7 @@ $lang["admin_buy"] = '%1$sVaraa%2$s lippuja';
 $lang["alert"] = 'VAROITUS';
 $lang["are-you-ready"] = 'Varmista tiedot ja paina Jatka.';
 
-$lang["backto"] = 'Takaisin %1$s';
+$lang["backto"] = '%1$s';
 $lang["book"] = 'Varaa';
 $lang["bookagain"] = 'Tee %1$sToinen varaus%2$s';
 $lang["bookid"] = 'Koodi';
@@ -31,7 +31,7 @@ $lang["cancel"] = "Peruuta";
 $lang["cancellations"] = "Peruutukset";
 $lang["cat"] = 'Hinta';
 $lang["cat_free"] = 'Ilmaisia';
-$lang["cat_normal"] = 'Normaali ';
+$lang["cat_normal"] = 'Hinta ';
 $lang["cat_reduced"] = 'Alennus ';
 $lang["ccard_failed"] = '%1$s WHILE PROCESSING A CREDIT CARD NOTIFICATION\n\n\n';
 $lang["ccard_partner"] = 'Credit card payment made secure by&nbsp;%1$s';
@@ -90,7 +90,7 @@ $lang["err_ic_showid"] =  'Kaikki valitut varaukset eivät ole samaan näytökseen.
 $lang["err_noaddress"] = 'Luottokorttimaksua käyttäessä täytyy täyttää vähintään sähköpostiosoite, lähiosoite, postinumero sekä postitoimipaikka.';
 $lang["err_noavailspec"] = 'Ei elokuvia'; // § NEW IN 1.2.2b
 $lang["err_nodates"] = 'Elokuvaan ei löytynyt näytöksiä.';
-$lang["err_noname"] = 'Täytä vähintään etu-ja sukunimi';
+$lang["err_noname"] = 'Täytä vähintään etunimi, sukunimi ja sähköpostiosoite.';
 $lang["err_noprices"] = 'Tähän näytökseen ei ole määritelty hintaa.';
 $lang["err_noseats"] = 'Ei paikkoja'; // § NEW
 $lang["err_nospec"] = 'Täytä elokuvan nimi.';
@@ -135,7 +135,7 @@ $lang['imagesrc'] = 'Kuvan sijainti';
 $lang["immediately"] = 'heti';
 $lang["import"] = 'Lähetä tämä tiedosto';
 $lang["in"] = '%1$s:ssa'; // as in "in <ten days>"
-$lang["index_head"] = 'Studio 123 Järvenpää Lipunvaraus';
+$lang["index_head"] = '<img src="/images/studio123ticketing.jpg" alt="Järvenpään Studiot Lipunvaraus">';
 $lang["intro_ccard"] = <<<EOD
  <h2>Kiitos varauksestanne</h2>
 
@@ -217,7 +217,7 @@ $lang["legend"] = 'Paikat: ';
 $lang["link_bookinglist"] = 'Varauslistaan';
 $lang["link_edit"] = 'Muokkaa näytöksiä';
 $lang["link_index"] = 'Etusivulle';
-$lang["link_pay"] = 'Henkilötiedot';
+$lang["link_pay"] = 'Varaustiedot';
 $lang["link_repr"] = 'Näytös lista';
 $lang["link_seats"] = 'Paikan valinta';
 $lang["login"] = 'Järjestelmän ylläpitäjä (ainoastaan henkilökunnalle):';
@@ -405,9 +405,9 @@ mahdollisimman pian.</p>
 EOD;
 
 $lang["params"] = 'Muokkaa %1$sjärjestelmän asetuksia%2$s';
-$lang["pay_cash"] = 'kassalla';
+$lang["pay_cash"] = 'Ei';
 $lang["pay_ccard"] = 'luottokortilla';
-$lang["pay_other"] = 'maksettu';
+$lang["pay_other"] = 'Kyllä';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
 Liput on lunastettava viimeistään 15 minuuttia ennen näytöksen alkua, 
@@ -449,8 +449,8 @@ $lang["reduction_or_charges"] = 'Lisämaksut';
 $lang["remail"] = 'Katosiko lippusi? Löydät ne seuraavasta linkistä: %1$sLippujen nouto%2$s';
 $lang["reminders"] = 'Muistutukset';
 $lang["reqd_info"] = <<<EOD
-Täytä vähintään etu-ja sukunimi alla oleviin kenttiin.
-Jos annat sähköpostiosoitteen, saat varaustiedot myös sähköpostitse.
+Täytä alla olevat tiedot.
+Saat varaustiedot sähköpostitse.
 EOD;
 $lang["reserved-header"] = 'Salikartta';
 $lang["row"] = 'Rivi';
@@ -464,7 +464,7 @@ $lang["seats_booked"] = 'Varatut paikat';
 $lang["seeasalist"] = 'Näytä %1$slistana%2$s';
 $lang["seeasamap"] = 'Näytä varaukset tähän näytökseen %1$svarauskarttana%2$s';
 $lang["select"] = 'Valitse';
-$lang["select_payment"] = 'Valitse maksutapa:';
+$lang["select_payment"] = 'Maksetaanko heti:';
 $lang["selected_1"] = '1 paikka valittu';
 $lang["selected_n"] = '%1$d paikkaa valittu';
 $lang["sentto"] = 'Viesti lähetetty %1$s';
