@@ -96,6 +96,7 @@ if (!empty($hook_catmap)) {
   compute_cats(true);
 }
 
+if (!admin_mode()) {
 if ($_SESSION["payment"]!=PAY_OTHER)  {	
   if (!$_SESSION["email"]) {
     if (!$_SESSION["phone"])
@@ -103,6 +104,7 @@ if ($_SESSION["payment"]!=PAY_OTHER)  {
     else
       kaboom($lang["warn-nomail"]);
   }
+}
 }
 
 show_head();
@@ -112,12 +114,12 @@ $sh = get_show($_SESSION["showid"]);
 $spectacleid = $sh["spectacleid"]; // movie ID
 $spec = get_spectacle($spectacleid);
 
-echo '<p class="main">'.$lang["intro_confirm"].'</p>';
+//echo '<p class="main">'.$lang["intro_confirm"].'</p>';
 echo '<h2>'.$lang["summary"].'</h2>';
 
-echo '<p class="main">';
+echo '<p class="main"> Elokuva: ';
 printf(htmlspecialchars($spec["name"])); // movie name
-echo '</p><p class="main">';
+echo '</p><p class="main">N&auml;yt&ouml;s: ';
 show_show_info();
 echo '</p>';
 
