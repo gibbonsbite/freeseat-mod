@@ -219,9 +219,9 @@ $show_price = price_depends_on_cat($sh["spectacleid"]);
 show_head(true);
 
 echo '<h2>'.$lang["err_checkseats"].'</h2>'; // not an error - lang item is a bit misnamed
-echo '<p class="main">';
+echo '<p class="main">Elokuva: ';
 printf(htmlspecialchars($spec["name"])); // movie name
-echo '</p><p class="main">';
+echo '</p><p class="main">N&auml;yt&ouml;s: ';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';
 
