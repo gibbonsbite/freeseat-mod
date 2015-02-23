@@ -46,6 +46,8 @@ else if (!count($ss))
 
 /* displays an image and text description of spectacles on opening page */
 
+echo '<div class="warning">'.$lang["index_head"].'</div>';
+
 show_head();
 
 if (admin_mode()) {
@@ -54,15 +56,14 @@ if (admin_mode()) {
 
 (In non-admin mode those are still available but the link is not
 shown) */
-  if ($allshown)
+
+if ($take_down) echo "<p class='emph-a-lot'>$take_down</p>";
+
+if ($allshown)
     printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="index.php">','</a>]');
   else
     printf('<p class="main">'.$lang["showallspec"].'</p>','[<a href="index.php?nohide">','</a>]');
 }
-
-echo '<h2>'.$lang["index_head"].'</h2>';
-
-if ($take_down) echo "<p class='emph-a-lot'>$take_down</p>";
 
 echo '<table width="80%">';
 foreach ($ss as $s) {
