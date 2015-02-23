@@ -159,10 +159,12 @@ function check_session($n,$quiet=false) {
       } else if ($n>=3 && do_hook_exists("check_session", 3)) {
 	$url = "seats";
       } else if ($n>=4) {
-	if ((!isset($_SESSION["lastname"])) || $_SESSION["lastname"]=='') {
-	  kaboom($lang["err_noname"]);
-	  $url="pay";
-	} else if (isset($_SESSION["email"]) && $_SESSION["email"] && !is_email_ok($_SESSION["email"])) {
+	if (admin_mode() && isset($_SESSION["lastname"]) && $_SESSION["lastname"]) {
+	return;
+	} else if ((!isset($_SESSION["firstname"])) || (!isset($_SESSION["lastname"])) || (!isset($_SESSION["email"])) || $_SESSION["firstname"]=='' || $_SESSION["lastname"]=='' || $_SESSION["email"]=='') {
+		kaboom($lang["err_noname"]);
+		$url="pay";
+		} else if (isset($_SESSION["email"]) && $_SESSION["email"] && !is_email_ok($_SESSION["email"])) {
 	  kaboom($lang["err_bademail"]);
 	  $url="pay";
 	} else if ($snb && !payment_open($sh,$_SESSION["payment"])) {
