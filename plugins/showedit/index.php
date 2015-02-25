@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="datepicker.css" type="text/css" />
-<script src="/jquery/jquery-1.9.1.js"></script>
-<script src="/jquery/jquery-ui.js"></script>
+<script src="/reservation/jquery/jquery-1.9.1.js"></script>
+<script src="/reservation/jquery/jquery-ui.js"></script>
 <script>
   $(function() {
     $( "#datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
