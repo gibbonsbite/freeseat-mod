@@ -1,4 +1,4 @@
-<script src="/jquery/jquery.min.js"></script>
+<script src="jquery/jquery.min.js"></script>
 <script src="js/checkall.js"></script>
 <?php
 
@@ -412,10 +412,13 @@ if ($ab) {
     echo "</ul>";
       ?>
 <?php } else {
-  if ($setstate==ST_PAID)
+  if ($setstate==ST_PAID) {
+    $paid=1;
+	global $paid;
     echo '<p class="main">'.$lang["total"].'&nbsp;:'.price_to_string($total).'</p>';
+	}
 
-  echo '<p class="main"><input type="submit" value="'.$lang["confirmation"].'">';
+  if ($paid!=1) echo '<p class="main"><input type="submit" value="'.$lang["confirmation"].'">';
   do_hook('bookinglist_process'); // When admin presses print, bookings are confirmed
   do_hook('bookinglist_pagebottom');
   echo '<a href="bookinglist.php';
@@ -426,7 +429,7 @@ if ($ab) {
       $sep = "&amp;";
     }
   }
-  echo '"> '.$lang["cancel"].'</a></p>';
+  echo '"> <p class="main">'.$lang["cancel"].'</a></p>';
 }
   
 } else {

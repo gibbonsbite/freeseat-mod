@@ -50,8 +50,11 @@ function adminprint_process() {
 function adminprint_button() {
   global $lang;
   
-  // echo '<li><p class="main">';
+  echo '<p class="main">';
+  global $paid;
+  if ($paid==1) {
   printf($lang["print_entries"],'<input type="submit" name="print" value="','">');
+  }
   do_hook('adminprint_line');
-  // echo '</p></li>';
+  echo '</p>';
 }
