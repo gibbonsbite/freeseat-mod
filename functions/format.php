@@ -117,7 +117,7 @@ function show_foot() {
 <div class='dontprint'>
 <!--hr style="width:100%;"--> 
 <!--/div-->
-<div class='adminlogin'>
+<div class="adminlogin">
 <form action='<?php echo freeseat_url("index.php", true); ?>' method='post'>
 <p class='fine-print'>
 <?php
@@ -132,14 +132,14 @@ if (admin_mode()) {
 </p>
 </form>
 <div class="dontprint"><div class="ad"><p class="fine-print">
-(<?php
+<?php
  /* NOTE - Please don't remove the link to the project page when
  running your ticketing site (You may move the link around though).
 
  Leaving that tiny ad in place just increases chances more people use
  it and therefore motivates me to support it further :) Thanks */
-    printf($lang["poweredby"],'<a href="http://freeseat.sf.net" target="_blank">FreeSeat</a>');
-?>)</p></div></div></div>
+if (!admin_mode()) printf($lang["poweredby"],'<a href="http://freeseat.sf.net" target="_blank">FreeSeat</a>');
+?></p></div></div></div>
 
 <?php
     if ($footerpage) {
