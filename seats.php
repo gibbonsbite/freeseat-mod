@@ -150,7 +150,7 @@ function seatcallback($currseat) {
     echo '><br>';
   }
   if ($currseat['col']=="INV") {
-  echo '<img src="/images/handicap.jpg">';
+  echo '<img src="images/handicap.jpg">';
   } else {
   echo $currseat['col'];
   echo "</label>";
