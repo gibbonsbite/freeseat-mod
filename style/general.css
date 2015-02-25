@@ -189,10 +189,10 @@ div.bookid {
 }
 
 div.adminlogin {
-	
 	float: right;
 	right:0;
 	bottom:0;
+	background: rgba(255, 255, 255, 0.8);
 }
 
 @media print { 
