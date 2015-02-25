@@ -9,9 +9,9 @@ function freeseat_plugin_init_csvnames() {
 
 function csvnames_link() {
   global $lang;
-  echo '<li><p class="main">';
+  echo '<p class="main">';
   printf($lang['csvnames_download'] . ' <a href="'. FS_PATH .'plugins/csvnames/">['.$lang['csvnames_link'].']</a>');
-  echo '</p></li>';
+  echo '</p>';
 }
 
 ?>
