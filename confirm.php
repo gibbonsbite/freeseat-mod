@@ -125,8 +125,9 @@ echo '</p>';
 
 echo print_booked_seats(null,FMT_PRICE|FMT_CORRECTLINK);
 show_user_info();
+if (admin_mode()) {
 if (get_total() > 0) show_pay_info();
-
+}
 echo '<p class="main">';
 printf($lang["change_pay"],'[<a href="pay.php">','</a>]');
 echo '</p>';
