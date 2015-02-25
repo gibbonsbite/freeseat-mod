@@ -41,7 +41,7 @@ $lang["change_seats"] = 'Muuta %1$spaikkaa%2$s';
 $lang["check_st_update"] = 'Tarkista että alla oleva lista varauksista on oikein ja paina Varmista';
 $lang["choose_show"] = 'Valitse esitys';
 $lang["city"] = 'Kaupunki';
-$lang["comment"] = 'Kommentti';
+$lang["comment"] = 'Merkinnät';
 $lang["confirmation"] = 'Varmista';
 $lang["continue"] = 'Jatka';
 $lang["country"] = 'Maa';
@@ -57,11 +57,11 @@ $lang["day"] = 'pv.'; // abbreviated
 $lang["days"] = 'päivät';
 $lang["DELETE"] = 'Poista'; // used in check_st_update
 $lang["description"] = 'Kuvaus';
-$lang["diffprice"] = '<strong><img src="/images/handicap.jpg"> paikat ovat pyörätuolipaikkoja eikä niissä ole istumapaikkaa</strong>';
+$lang["diffprice"] = '<strong><img src="images/handicap.jpg"> paikat ovat pyörätuolipaikkoja eikä niissä ole istumapaikkaa</strong>';
 $lang["disabled"] = "Suljettu"; // for shows or payment methods
 $lang["dump_csv"] = 'Tietokanta CSV-muodossa: %1$sbookings.csv%2$s';
 
-$lang['editshows'] = 'Lisää tai muokkaa %1$selokuvan%2$s tietoja';
+$lang['editshows'] = '%1$sMuokkaa%2$s tietoja tai näytöksiä';
 $lang["email"] = 'Sähköpostiosoite';
 $lang["err_bademail"] = 'Sähköpostiosoite ei ole hyväksytyssä muodossa';
 $lang["err_badip"] = 'Sinulla ei ole pääsyoikeuksia tähän tiedostoon';
@@ -76,7 +76,7 @@ $lang["err_ccard_repay"] = 'Hyväksytty luottokorttimaksu saapunut paikalle %1$d 
 $lang["err_ccard_toomuch"] = 'Maksu liian suuri! %3$s %1$d käyttämättä %3$s %2$d :stä.';
 $lang["err_ccard_user"] = 'Maksussa oli ongelma - voit yrittää uudelleen, tai lähettää sähköpostia %1$s';
 $lang["err_checkseats"] = 'Valitse paikat';
-$lang["err_closed"] = 'Pahoittelumme, nettivaraus tähän näytökseen on juuri sulkeutunut';
+$lang["err_closed"] = 'Pahoittelumme, nettivaraus tähän näytökseen on sulkeutunut.';
 $lang["err_config"] = 'Check server configuration on: '; // § NEW
 $lang["err_connect"] = 'Yhteysvirhe : ';
 $lang["err_cronusage"] = "One argument expected (database booking system password)\n";
@@ -90,7 +90,7 @@ $lang["err_ic_showid"] =  'Kaikki valitut varaukset eivät ole samaan näytökseen.
 $lang["err_noaddress"] = 'Luottokorttimaksua käyttäessä täytyy täyttää vähintään sähköpostiosoite, lähiosoite, postinumero sekä postitoimipaikka.';
 $lang["err_noavailspec"] = 'Ei elokuvia'; // § NEW IN 1.2.2b
 $lang["err_nodates"] = 'Elokuvaan ei löytynyt näytöksiä.';
-$lang["err_noname"] = 'Täytä vähintään etunimi, sukunimi ja sähköpostiosoite.';
+$lang["err_noname"] = 'Täytä etunimi, sukunimi ja sähköpostiosoite.';
 $lang["err_noprices"] = 'Tähän näytökseen ei ole määritelty hintaa.';
 $lang["err_noseats"] = 'Ei paikkoja'; // § NEW
 $lang["err_nospec"] = 'Täytä elokuvan nimi.';
@@ -135,7 +135,7 @@ $lang['imagesrc'] = 'Kuvan sijainti';
 $lang["immediately"] = 'heti';
 $lang["import"] = 'Lähetä tämä tiedosto';
 $lang["in"] = '%1$s:ssa'; // as in "in <ten days>"
-$lang["index_head"] = '<img src="/images/studio123ticketing.jpg" alt="Järvenpään Studiot Lipunvaraus">';
+$lang["index_head"] = '<img src="/reservation/images/studio123ticketing.jpg" alt="Järvenpään Studiot Lipunvaraus">';
 $lang["intro_ccard"] = <<<EOD
  <h2>Kiitos varauksestanne</h2>
 
@@ -220,7 +220,7 @@ $lang["link_index"] = 'Etusivulle';
 $lang["link_pay"] = 'Varaustiedot';
 $lang["link_repr"] = 'Näytös lista';
 $lang["link_seats"] = 'Paikan valinta';
-$lang["login"] = 'Järjestelmän ylläpitäjä (ainoastaan henkilökunnalle):';
+$lang["login"] = 'Kirjaudu sisään (ainoastaan henkilökunnalle):';
 $lang["logout"] = 'Kirjaudu ulos';
 
 $lang["mail-anon"] = <<<EOD
