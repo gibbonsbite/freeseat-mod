@@ -18,7 +18,7 @@ $lang["are-you-ready"] = 'Varmista tiedot ja paina Jatka.';
 
 $lang["backto"] = '%1$s';
 $lang["book"] = 'Varaa';
-$lang["bookagain"] = 'Tee %1$sToinen varaus%2$s';
+$lang["bookagain"] = 'Tee %1$sToinen varaus samaan elokuvaan%2$s';
 $lang["bookid"] = 'Koodi';
 $lang["book_adminonly"] = 'Varaus suljettu';
 $lang["book_submit"] = 'Tee varaus';
@@ -119,7 +119,7 @@ $lang["expiration"] = 'Vanhentuminen';
 $lang["expired"] = 'vanhentunut';
 
 $lang["failure"] = 'PANIC';
-$lang["file"] = 'Tiedosto: '; 
+$lang["file"] = 'Juliste nimi'; 
 $lang["filter"] = 'Tila:'; // filter form header in bookinglist
 $lang["firstname"] = 'Etunimi';
 $lang["from"] = ''; // in a temporal sense : from a to b
