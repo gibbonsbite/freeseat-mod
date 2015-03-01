@@ -25,11 +25,7 @@ function autopay_checkbox() {
     /* Note, the "other" payment method can normally only be selected
      by the admin, but keeping the check in case other plugins
      interfere... */
-    echo '<p class="main"><input type="checkbox" name="autopay"'; 
-    if (isset($_SESSION["autopay"]) and $_SESSION["autopay"]) {
-      echo ' checked="checked"';
-    }
-    echo '> Merkkaa maksetuiksi</p>';
+    echo '<p class="main"><input type="checkbox" name="autopay" checked="checked"> Merkkaa maksetuiksi</p>'; 
   }
 }
 
