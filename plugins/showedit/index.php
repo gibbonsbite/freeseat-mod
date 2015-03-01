@@ -28,26 +28,19 @@ function get_upload( &$perf ) {
 	global $upload_path, $lang;
 
 	$permitted = array("jpeg","jpg","gif","png","bmp");
-	foreach( $_FILES as $file_name => $file_array ) {
-	  if ($file_array['name'] != "") {
-	    // do nothing if user didn't submit a file
-	    $parts = pathinfo($file_array['name']);
-	    $target = $parts["basename"];
-	    if ( is_uploaded_file( $file_array['tmp_name'] )
-		 //&& strstr( $file_array['type'], "image" )
-		 && isset($parts["extension"])
-		 && in_array(strtolower($parts["extension"]),$permitted)) {
-	      if (!move_uploaded_file( $file_array['tmp_name'], apply_fspath($upload_path . $target))) {
-		kaboom( $lang['err_upload'] ) ;
-		/* (keep old value if upload failed) */
-	      } else {
+	if ($_POST['uploadedfile'] == "") {
+		foreach( $_FILES as $file_name => $file_array ) {
+		$parts = pathinfo($file_array['name']);
+		$target = $parts["basename"];
 		$perf['imagesrc'] = $target;
-	      }
-	    } else  {
+		if ($file_array['name'] == "") {
 	      kaboom( $lang['err_filetype'] . "image" );
 	      $perf['imagesrc'] = "";
 	    }
-	  }
+		}
+	} else {
+	$target = $_POST['uploadedfile'] . ".jpg";
+	$perf['imagesrc'] = $target;
 	}
 }
 
@@ -68,8 +61,9 @@ function choose_local_file($spec)
 {
 	global $lang;
 	
+	echo '<br /><h3>' . $lang['file'] . '</h3>';
 	echo '<input type="hidden" name="MAX_FILE_SIZE" value="100000">';
-	echo '<input name="uploadedfile" type="file"><br>';
+	echo '<input name="uploadedfile" type="text"><br>';
 }
 
 function choose_spectacle( $new, $spec )
@@ -447,14 +441,13 @@ echo '<div class="image-selection"><h3>' . $lang['imagesrc'] . '</h3>' ;    // i
  // imagesrc: default, to be used if user does not upload an image.
 echo '<input type="hidden" name="imagesrc" value="'.htmlspecialchars($perf["imagesrc"]).'">';
 if ($perf['imagesrc']) {
-    echo $lang['file'] . htmlspecialchars($perf['imagesrc']) . '<br>';
     echo '<img src="' . htmlspecialchars(apply_fspath($upload_url . $perf['imagesrc'])) . '"><br>';
 } else
 	echo $lang['noimage'];
-if (!$ready) choose_local_file('image');
 echo '</div>';
 echo '<input type="hidden" name="id" value="'.$spec.'">';
 print_var("name",$perf['name'],$lang["name"]);
+if (!$ready) choose_local_file('image');
 print_var("description",$perf['description'],$lang["description"]);
 
 echo '<div class="form">';
