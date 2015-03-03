@@ -50,14 +50,14 @@ echo '<div class="warning">'.$lang["index_head"].'</div>';
 
 show_head();
 
+if ($take_down) echo "<p class='emph-a-lot'>$take_down</p>";
+
 if (admin_mode()) {
 /* in admin mode, permit some customisation of which spectacles are
    displayed.
 
 (In non-admin mode those are still available but the link is not
 shown) */
-
-if ($take_down) echo "<p class='emph-a-lot'>$take_down</p>";
 
 if ($allshown)
     printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="index.php">','</a>]');
