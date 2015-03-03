@@ -441,7 +441,7 @@ echo '<div class="image-selection"><h3>' . $lang['imagesrc'] . '</h3>' ;    // i
  // imagesrc: default, to be used if user does not upload an image.
 echo '<input type="hidden" name="imagesrc" value="'.htmlspecialchars($perf["imagesrc"]).'">';
 if ($perf['imagesrc']) {
-    echo '<img src="' . htmlspecialchars(apply_fspath($upload_url . $perf['imagesrc'])) . '"><br>';
+    echo '<img src="' . htmlspecialchars(apply_fspath($upload_url . $perf['imagesrc'])) . '" height="150"><br>';
 } else
 	echo $lang['noimage'];
 echo '</div>';
