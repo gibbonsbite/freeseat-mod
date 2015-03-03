@@ -50,10 +50,10 @@ function htmltickets_body($booking) {
   show_show_info(get_show($booking["showid"]),false);
   echo "</p>\n";
   
-  show_user_info(false,$booking);
+//  show_user_info(false,$booking);
 
   $oneline = array($booking);
-  echo print_booked_seats($oneline,FMT_NOCOUNT|FMT_PRICE|FMT_HTML);
+  echo print_booked_seats($oneline,FMT_NOCOUNT|FMT_HTML);
 
   echo '</div>';
 }
