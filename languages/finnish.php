@@ -119,7 +119,7 @@ $lang["expiration"] = 'Vanhentuminen';
 $lang["expired"] = 'vanhentunut';
 
 $lang["failure"] = 'PANIC';
-$lang["file"] = 'Juliste nimi'; 
+$lang["file"] = 'Julisteen nimi'; 
 $lang["filter"] = 'Tila:'; // filter form header in bookinglist
 $lang["firstname"] = 'Etunimi';
 $lang["from"] = ''; // in a temporal sense : from a to b
@@ -131,7 +131,7 @@ $lang["hour"] = 't'; // abbreviated
 $lang["howmanyare"] = 'Montako näistä %1$d paikasta ovat';
 
 $lang["id"] = 'Tunnus';
-$lang['imagesrc'] = 'Kuvan sijainti';
+$lang['imagesrc'] = 'Juliste';
 $lang["immediately"] = 'heti';
 $lang["import"] = 'Lähetä tämä tiedosto';
 $lang["in"] = '%1$s:ssa'; // as in "in <ten days>"
