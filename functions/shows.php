@@ -19,7 +19,7 @@ Information about shows (a.k.a performances)
 
 function get_shows($cond="") {
   if ($cond) $cond = "( $cond ) and ";
-  return fetch_all(mysql_query("select shows.id, shows.theatre, shows.disabled, theatres.name as theatrename, theatres.imagesrc, date, time, spectacle as spectacleid from shows,theatres where $cond theatres.id=shows.theatre order by date,time"));
+  return fetch_all(mysql_query("select shows.id, shows.theatre, shows.disabled, theatres.name as theatrename, theatres.imagesrc, date, time, spectacle as spectacleid from shows,theatres where $cond theatres.id=shows.theatre order by date DESC,time DESC"));
 }
 
 function get_show($id) {
