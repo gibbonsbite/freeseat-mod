@@ -19,10 +19,10 @@ display a seat of the given class on a seatmap */
         background-color: green;
  }
 .cls3 { 
-        background-color: yellow;
+        background-color: green;
 }
 .cls4 { 
-        background-color: magenta;
+        background-color: green;
 }
 /* Used in the colour key when there's more than one seat category */
 .clsdefault {
@@ -31,7 +31,8 @@ display a seat of the given class on a seatmap */
 
 /* These css classes represent a booking in a given state */
 .stfree {
-          background-color: lightgreen;
+          background-color: green;
+		  padding-right: 40px;
  }
 .stlocked { 
             background-color: lightgrey;
@@ -44,9 +45,10 @@ display a seat of the given class on a seatmap */
  }
 .stpaid { 
           background-color: red;
+		  padding-right: 40px;
  }
 .stdisabled { 
-              background-color: white;
+              background-color: gray;
  }
 
 #trailerboard {
@@ -128,6 +130,12 @@ p.emph-a-lot {
     font-weight : 900;
 }
 
+p.big {
+    text-align : center;
+    font-size : 18pt;
+    font-weight : 900;
+}
+
 p.fine-print {
     font-size : 9pt;
 }
@@ -135,6 +143,24 @@ p.fine-print {
 input.fine-print {
     font-size : 5pt;
   }
+  
+input[type=submit] {
+  background: black;
+  color: white;
+  width: 5em;  height: 2em;
+  font-size: 12pt;
+}
+
+
+
+input[type=checkbox] + label {
+  color: white;
+}
+
+input[type=checkbox]:checked + label {
+  color: red;
+}
+
 
 /* pagewide (or almost) paragraphs */
 p.main {
@@ -266,7 +292,7 @@ width: 700px;
 div.wide {
 background: rgba(255, 255, 255, 1);
 position: relative;
-width: 900px;
+width: 1000px;
     margin-left:auto;
 	margin-right:auto;
 /*    float: right; */
@@ -286,6 +312,10 @@ span.subpage {
   font-size:x-small;
   vertical-align:sub;
 
+}
+
+td, th {
+    padding: 3px;
 }
 
 /* a table that contains a form */
@@ -364,7 +394,7 @@ ul li {
 list-style-type:none;
 }
 
-label { display: inline-block; width: 100%; }
+label { display: inline-block; width: 100%; font-size: 11pt; }
 
 
 /* "css popups" 
