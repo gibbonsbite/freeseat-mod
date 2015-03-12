@@ -143,9 +143,9 @@ function seatcallback($currseat) {
   else
     $colour = "cls".$currseat['class'];
 
-  echo "<td colspan='2' align='center' class='$colour'><p class='seats'><label>";
+  echo "<td colspan='2' align='center' class='$colour'><p class='seats'>";
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
-  	echo '<input type="checkbox" name="'.$currseat['id'].'"';
+  	echo '<label><input type="checkbox" name="'.$currseat['id'].'"';
     if ($chkd) echo ' checked="checked"';
     echo '><label>';
   }
@@ -153,7 +153,9 @@ function seatcallback($currseat) {
   echo '<img src="images/handicap.jpg">';
   } else {
   echo $currseat['row'].$currseat['col'];
+  if (($st==ST_FREE) || ($st==ST_DELETED)) {
   echo "</label></label>";
+  }
   }
 }
 
