@@ -37,7 +37,7 @@ function make_legend($numberedseats) {
 
 	$prices= array();
 
-	//	$show_price= false; // set to true if prices depend on class
+	$show_price= true; // set to true if prices depend on class
 	$show_cat  = false;  // set to true if prices depend on cat
 
 	if ($list = fetch_all(mysql_query($q))) {
@@ -47,8 +47,8 @@ function make_legend($numberedseats) {
 /* 	    if (!isset($cat_price[$item['cat']])) $cat_price[$item['cat']]=$item['price']; */
 /* 	    else if ($cat_price[$item['cat']]!=$item['price']) $show_price=true; */
 
-	    if (!isset($class_price[$item['class']])) $class_price[$item['class']]=$item['price'];
-	    else if ($class_price[$item['class']]!='0') $show_cat=true;
+	    //if (!isset($class_price[$item['class']])) $class_price[$item['class']]=$item['price'];
+	    //else if ($class_price[$item['class']]!='0') $show_cat=true;
 	  }
 
 	  echo "<h2>" . $lang[$numberedseats?"reserved-header":"nnseat-header"] . "</h2>";
@@ -81,7 +81,7 @@ function make_legend($numberedseats) {
 	       class, otherwise show as orange */
 	    if (count($prices)>1) $class = 'default';
 	    echo "<td>".$lang["seat_occupied"]."</td><td class='stpaid' align='center'></td>";
-	    echo "<td>".$lang["seat_free"]."</td><td class='cls$class' align='center'></td>";
+	    echo "<td>".$lang["seat_free"]."</td><td class='stfree' align='center'></td>";
 	  }
 	  echo "</tr></table></p>";
 	} // else : don't output anything if there are no seats...
@@ -147,13 +147,13 @@ function seatcallback($currseat) {
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
   	echo '<input type="checkbox" name="'.$currseat['id'].'"';
     if ($chkd) echo ' checked="checked"';
-    echo '><br>';
+    echo '><label>';
   }
   if ($currseat['col']=="INV") {
   echo '<img src="images/handicap.jpg">';
   } else {
-  echo $currseat['col'];
-  echo "</label>";
+  echo $currseat['row'].$currseat['col'];
+  echo "</label></label>";
   }
 }
 
