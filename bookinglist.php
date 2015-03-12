@@ -351,7 +351,7 @@ if ($ab) {
       $b['date'].' '.f_time($b['time']).
       // check for -1: don't display row/col information for
       // unnumbered seats.
-      '</a><td>'.($b['row']==-1? '': htmlspecialchars($b['col']).', '.$lang["row"].' '.htmlspecialchars($b['row']).' ').'('.htmlspecialchars($b['zone']).')'.
+      '</a><td>'.($b['row']==-1? '': htmlspecialchars($b['col']).', '.$lang["row"].' '.htmlspecialchars($b['row']).' ').
       '<td bgcolor="#ffffb0">'.f_cat($b['cat'])." (".price_to_string($itemprice).")".
       '<td>'.$b['firstname'].' <i>'.$b['lastname'].'</i>'.
       '<td bgcolor="#ffffb0">'.f_mail($b['email']).
