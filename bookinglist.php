@@ -437,7 +437,7 @@ if ($ab) {
 }
 
 echo '<p class="main">';
-printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
+printf($lang["backto"],'[<a href="http://www.studiot123.com/listreserve/">'.$lang["link_index"].'</a>]');
 echo '</p></form>';
 
 show_foot();
