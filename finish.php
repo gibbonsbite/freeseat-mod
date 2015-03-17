@@ -221,7 +221,7 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
  echo '<br />';
  }
  if (admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com/listreserve/">'.$lang["link_showlist"].'</a>]');
-printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
+if (!admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com">'.$lang["link_index"].'</a>]');
  echo '</p></div>';
 
    /* 

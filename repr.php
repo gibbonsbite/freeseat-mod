@@ -172,7 +172,7 @@ printf('<p class="main">'.$lang["hideold"].'</p>','[<a href="'. FS_PATH . 'repr.
 printf('<p class="main">'.$lang["showallspec"].'</p>','[<a href="'. FS_PATH . 'repr.php?spectacleid='.$spectacleid.'&nohide">','</a>]');
 }
 if (admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com/listreserve/">'.$lang["link_showlist"].'</a>]');
-printf($lang["backto"],'[<a href="index.php">'.$lang["link_index"].'</a>]');
+if (!admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com">'.$lang["link_index"].'</a>]');
 echo '</p>';
 
 show_foot(); ?>
