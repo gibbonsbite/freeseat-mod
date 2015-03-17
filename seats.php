@@ -226,6 +226,7 @@ printf(htmlspecialchars($spec["name"])); // movie name
 echo '</p><p class="main">N&auml;yt&ouml;s: ';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';
+if (admin_mode()) echo '<p class="main">Takaisin [<a href="http://www.studiot123.com/listreserve">'.$lang["link_showlist"].'</a>]</p>';
 
 do_hook("seatmap_top");
 
