@@ -30,7 +30,7 @@ else
   $scannerinput = null;
 
 if ($scannerinput) {
-  
+  $scannerinput = substr($scannerinput, 0, -1);
   $booking = get_booking($scannerinput);
 
   $state = $booking['state'];
