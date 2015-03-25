@@ -60,8 +60,8 @@ function barcode_encode_ean($ean, $encoding = "EAN-13"){
     }
 
     $ean=substr($ean,0,12);
-    //$eansum=barcode_gen_ean_sum($ean);
-    //$ean.=$eansum;
+    $eansum=barcode_gen_ean_sum($ean);
+    $ean.=$eansum;
     $line=$guards[0];
     for ($i=1;$i<13;$i++){
 	$str=$digits[$ean[$i]];
