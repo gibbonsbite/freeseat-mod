@@ -73,8 +73,9 @@ Read ticket barcodes (EAN format) <?php
 if ($scannerinput) {
 /* Only play a sound if we got an id from the scanner */
 
-  $sound = $validTicket? "true.wav" : "false.wav";
-  echo "<audio src='$sound' autoplay=1>";
+  $sound = $validTicket? "true.mp3" : "false.mp3";
+  echo "<audio autoplay>";
+  echo "<source src='$sound'>";
   echo "Your browser does not support the HTML5 audio element.";
   echo "</audio>";
  }
