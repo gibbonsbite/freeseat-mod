@@ -105,6 +105,7 @@ if ($scannerinput) { ?>
 <?php } ?>
 </div>
 </form>
+<a href="http://www.studiot123.com/listbarcode/">Takaisin</a>
 <?php
   show_foot();
 ?>
