@@ -221,7 +221,7 @@ function set_book_status($b,$state) {
   global $smtp_sender,$lang, $now;
   sys_log("setting ".$b["bookid"]." to $state (".f_state($state).")");
 
-  $q="update booking set state=$state";
+  $q="update booking set state=$state, timestamp=NOW()";
 
   if (mysql_query("$q where state!=".ST_DELETED." and id=".$b["bookid"])) {
     if ((mysql_affected_rows()>0)) {
