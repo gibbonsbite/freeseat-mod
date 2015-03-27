@@ -239,10 +239,12 @@ EOD;
  in the spectacle name and alter/extended it when needed (e.g. French
  de+le = du, German von+dem = vom, etc) */
 $lang["mail-booked"] = <<<EOD
-Kiitos varauksestanne elokuvaan:
-%1\$s
+Hyvä asiakas,
+kiitos varauksesta.
 
-Tässä varauksenne tiedot.
+Alla varauksenne tiedot:
+
+%1\$s
 
 EOD;
 
@@ -278,14 +280,13 @@ EOD;
 $lang["mail-heywakeup-p"] = <<<EOD
 
 
-Järjestelmämme mukaan, emme ole saaneet vielä maksua seuraavista varaamistanne paikoista:
+Järjestelmämme mukaan, ette ole vielä lunastaneet seuraavia lippuja:
 
 %1\$s
 Jos olette jo maksaneet, voitte poistaa tämän viestin.
 
 Jos haluatte sittenkin peruuttaa varauksenne,
-kertokaa siitä meille vastaamalla tähän sähköpostiin.
-Jos ette vastaa, joudumme peruuttamaan varauksenne.
+kertokaa siitä meille tämä sähköposti osoitteeseen peruutukset@studiot123.com
 EOD;
 
 $lang["mail-notconfirmed"] = <<<EOD
@@ -318,7 +319,7 @@ $lang["mail-reminder"] = <<<EOD
 Muistutus: Seuraava varaamanne paikka on vielä maksamatta:
 
 %1\$s
-Jos haluatte peruuttaa tämän varauksen, vastatkaa tähän sähköpostiin.
+Jos haluatte peruuttaa tämän varauksen, lähettäkää tämä sähköposti osoitteeseen peruutukset@studiot123.com
 
 EOD;
 
@@ -351,10 +352,10 @@ $lang["mail-summary-p"] = 'Paikat jotka ovat varmistettuja (paitsi vanhoihin näy
 $lang["admin-thankee"] = 'Varaus tallennettu.';
 
 $lang["mail-thankee"] = <<<EOD
-Kiitämme varauksestanne. Toivomme että nautitte elokuvasta!<br /><br />
-Liput voitte lunastaa kassallamme osoitteessa Helsingintie 12, Järvenpää.<br /><br />
-Jos tahdotte peruuttaa varauksenne, soittakaa kassamme aukioloaikana numeroon (09) 8366770.
-
+Kiitämme varauksestanne.
+Liput voitte lunastaa kassaltamme osoitteessa Helsingintie 12, Järvenpää.
+<strong>Esteen sattuessa pyydämme ystävällisesti peruuttamaan varauksenne soittamalla numeroon (09) 8366770 kassan aukioloaikana
+tai lähettämällä tämän sähköpostin osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong>
 EOD;
 
 $lang["mail-oops"] = <<<EOD
@@ -364,11 +365,11 @@ EOD;
     //'
 
 $lang["mail-sent"] = 'Sinulle on lähetetty sähköposti varaustiedoillanne. Tarkista roskapostikansio!';
-$lang["mail-sub-booked"] = 'Varauksenne';
-$lang["mail-sub-cancel"] = 'Varauksen peruutus';
+$lang["mail-sub-booked"] = 'Varauksenne Studio 123 Järvenpää';
+$lang["mail-sub-cancel"] = 'Varauksen peruutus Studio 123 Järvenpää';
 $lang["mail-sub-gotmoney"] = 'Maksun hyväksyntä';
-$lang["mail-sub-heywakeup"] = 'Muistutus';
-$lang["mail-sub-remail"] = 'Varauksen tiedot';
+$lang["mail-sub-heywakeup"] = 'Muistutus Studio 123 Järvenpää';
+$lang["mail-sub-remail"] = 'Varauksen tiedot Studio 123 Järvenpää';
 $lang["make_default"] = 'Tee tästä valittu näytös.  Vain yksi näytös voi olla valittu kerrallaan.';
 $lang['make_payment'] = 'Suorita maksu';
 $lang["max_seats"] = 'Maksimi määrä paikkoja jotka voidaan varata yhdellä kerralla';
@@ -400,9 +401,9 @@ $lang["panic"] = <<<EOD
 <p class='main'>Järjestelmän ylläpitäjälle on ilmoitettu ja ongelma korjataan
 mahdollisimman pian.</p>
 
-<p class='main'>Palatkaa muutaman tunnin päästä ja koittakaa uudelleen.</p>
+<p class='main'>Palatkaa sivulle muutaman tunnin päästä ja koittakaa uudelleen.</p>
 
-<p class='main'>Pahoittelemme häiriöstä ja arvostamme kärsivällisyyttänne.</p>
+<p class='main'>Pahoittelemme häiriötä, kiitos kärsivällisyydestänne.</p>
 EOD;
 
 $lang["params"] = 'Muokkaa %1$sjärjestelmän asetuksia%2$s';
@@ -411,8 +412,8 @@ $lang["pay_ccard"] = 'luottokortilla';
 $lang["pay_other"] = 'Kyllä';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
-Liput on lunastettava viimeistään 15 minuuttia ennen näytöksen alkua, 
-tai joudumme peruuttamaan varauksen.
+<strong>Liput elokuviin tulisi lunastaa viimeistään 30 minuuttia ennen näytöksen alkua.</strong>
+<u>Oopperoihin ja baletteihin liput tulisi lunastaa 2 päivää ennen näytöstä väliaikatarjoilun vuoksi.</u>
 
 EOD;
 $lang["payinfo_ccard"] = <<<EOD
