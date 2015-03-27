@@ -257,4 +257,5 @@ echo '<input type="submit" value="'.$lang["continue"].'">';
 
 echo '</form>';
 
-show_foot(); ?>
+//show_foot();
+?>

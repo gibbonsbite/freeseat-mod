@@ -232,7 +232,7 @@ session_destroy(); */
    } // end of block run when not credit card or already gone through
      // credit card processor
 
-show_foot();
+//show_foot();
 log_done();
 
 ?>

@@ -148,6 +148,6 @@ if ($_SESSION["payment"] == PAY_CCARD && get_total()>0) {
 }
 echo '</form>';
 
-show_foot();
+//show_foot();
 
 ?>
