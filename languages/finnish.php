@@ -239,12 +239,10 @@ EOD;
  in the spectacle name and alter/extended it when needed (e.g. French
  de+le = du, German von+dem = vom, etc) */
 $lang["mail-booked"] = <<<EOD
-Hyvä asiakas,
-kiitos varauksesta.
+Hyvä asiakas,<br />
+kiitos varauksesta.<br /><br />
 
 Alla varauksenne tiedot:
-
-%1\$s
 
 EOD;
 
@@ -352,10 +350,9 @@ $lang["mail-summary-p"] = 'Paikat jotka ovat varmistettuja (paitsi vanhoihin näy
 $lang["admin-thankee"] = 'Varaus tallennettu.';
 
 $lang["mail-thankee"] = <<<EOD
-Kiitämme varauksestanne.
-Liput voitte lunastaa kassaltamme osoitteessa Helsingintie 12, Järvenpää.
+Liput voitte lunastaa kassaltamme osoitteessa Helsingintie 12, Järvenpää.<br /><br />
 <strong>Esteen sattuessa pyydämme ystävällisesti peruuttamaan varauksenne soittamalla numeroon (09) 8366770 kassan aukioloaikana
-tai lähettämällä tämän sähköpostin osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong>
+tai lähettämällä tämän sähköpostin osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong><br /><br />
 EOD;
 
 $lang["mail-oops"] = <<<EOD
@@ -412,8 +409,8 @@ $lang["pay_ccard"] = 'luottokortilla';
 $lang["pay_other"] = 'Kyllä';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
-<strong>Liput elokuviin tulisi lunastaa viimeistään 30 minuuttia ennen näytöksen alkua.</strong>
-<u>Oopperoihin ja baletteihin liput tulisi lunastaa 2 päivää ennen näytöstä väliaikatarjoilun vuoksi.</u>
+<br /><strong>Liput elokuviin tulisi lunastaa viimeistään 30 minuuttia ennen näytöksen alkua.</strong><br />
+<u>Oopperoihin ja baletteihin liput tulisi lunastaa 2 päivää ennen näytöstä väliaikatarjoilun vuoksi.</u><br />
 
 EOD;
 $lang["payinfo_ccard"] = <<<EOD

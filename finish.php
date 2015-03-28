@@ -43,9 +43,9 @@ if ((!isset($_SESSION["booking_done"])) || ($_SESSION["booking_done"]===false)) 
     if (($bookid = book($_SESSION,$s))===false) { // || $_GET["panic"]=="NOW") {
       /* okay, now what?? :-( */
       
-      $body  = " \$_SESSION = \n";
+      $body  = " \$_SESSION = <br />";
       $body .= print_r($_SESSION,true);
-      $body .= " \$messages = \n";
+      $body .= " \$messages = <br />";
       $body .= flush_messages_text();
       
       send_message($smtp_sender,$admin_mail,"PANIC",$body);
@@ -151,13 +151,15 @@ else echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
 
   /* Now send a confirmation message if that hasn't been done already. */
 if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
-  $body  = sprintf($lang["mail-booked"],$spec["name"]);
-  $body .= $lang["name"].": ".$_SESSION["firstname"]." ".$_SESSION["lastname"]."\n";
-  $body .= "\n";
+  $body.='<html><body>';
+  $body  = $lang["mail-booked"]."<br /><br />";
+  $body .= $_SESSION["firstname"]." ".$_SESSION["lastname"]."<br /><br />";
+  $body .= $spec["name"];
+  $body .= "<br />";
   // TODO - BUG - $_SESSION["seats"] don't have the correct
   // date/time/theatrename fields
   $body .= print_booked_seats(null,FMT_SHOWINFO);
-  $body .= "\n";
+  $body .= "<br />";
   if (!$allpaid) {
     $body .= $lang["mail-notconfirmed"];
 
@@ -165,7 +167,7 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
       $body .= $lang["mail-secondmail"];
     }
 
-    $body .= "\n";
+    $body .= "<br />";
 
     /* TODO - show exactly the same stuff both in mail and in page,
  and code it only once .. */ 
@@ -185,8 +187,9 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
 
   $body.=$lang["mail-thankee"];
 
-  $body.= "\n";
-  $body.= "$auto_mail_signature\n";
+  $body.= "<br />";
+  $body.= "$auto_mail_signature<br />";
+  $body.= '</body></html>';
 
   send_message($smtp_sender,$_SESSION["email"],$lang["mail-sub-booked"],$body);
   $_SESSION["mail_sent"] = true; // last minute kludge to avoid sending the mail every time the user clicks reload

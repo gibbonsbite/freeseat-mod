@@ -38,7 +38,7 @@ function send_message($from,$to,$subject,$body) {
   // $mail->AddReplyTo();
   // $mail->WordWrap = 50;
   // $mail->AddAttachment("/var/tmp/file.tar.gz");      // no attachments for now
-  $mail->IsHTML(false);  	// send as HTML?
+  $mail->IsHTML(true);  	// send as HTML?
   $mail->Subject  =  $subject;
   $mail->Body     =  $body;
   if(!$mail->Send())  {

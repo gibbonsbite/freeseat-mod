@@ -80,7 +80,7 @@ function flush_messages_text() {
 
   $result = "";
   foreach ($messages as $message) {
-    $result .= "$message\n";
+    $result .= "$message<br />";
   }
   $messages = array();
   return $result;
@@ -305,7 +305,7 @@ function show_show_info($sh=null,$correctlink=true) {
 function print_line($s,$fmt) {
   if ($fmt & FMT_HTML) {
     return "<p class='main'>".htmlentities($s)."</p>";
-  } else return "$s\n";
+  } else return "$s<br />";
 }
 
 // Takes header names from $lang
@@ -318,7 +318,7 @@ function print_tableheader($columns,$fmt) {
     $result = '';
     foreach ($columns as $h => $w) $result .= str_pad($lang[$h],$w);
   }
-  return $result."\n";
+  return $result."<br />";
 }
 
 function print_tablerow($line,$columns,$fmt) {
@@ -329,7 +329,7 @@ function print_tablerow($line,$columns,$fmt) {
     $result = '';
     foreach ($columns as $h => $w) $result .= str_pad($line[$h],$w);
   }
-  return $result."\n";
+  return $result."<br />";
 }
 
 /** For an entry that has one label and one price, where the label is
@@ -341,7 +341,7 @@ $numcols how many columns there are in total
 $fmt controls whether html or rawtext is to be returned */
 function print_tablespecialrow($label,$price,$columns,$fmt) {
   if ($fmt & FMT_HTML) {
-      return "<tr><td class='price' colspan=".(count($columns)-1)."><b>$label</b><td class='price'>$price\n";
+      return "<tr><td class='price' colspan=".(count($columns)-1)."><b>$label</b><td class='price'>$price<br />";
   } else {
     $padding = 0;
     $prev = 0;
@@ -350,12 +350,12 @@ function print_tablespecialrow($label,$price,$columns,$fmt) {
       $padding += $prev;
       $prev = $w;
     }
-    return str_pad($label,$padding)."$price\n";
+    return str_pad($label,$padding)."$price<br />";
   }
 }
 
 function print_tablefooter($fmt) {
-  if ($fmt & FMT_HTML) return "</table>\n";
+  if ($fmt & FMT_HTML) return "</table><br />";
   else return "";
 }
 
@@ -403,7 +403,7 @@ function print_booked_seats($data = null,$fmt=FMT_CORRECTLINK) {
 		  "theatrename" => $bk["theatrename"]);
     /* \n has no effect in html but no <br> is needed there because
  <p></p> has appropriate spaces already */
-    $result .= print_line("\n".$lang["date"].": ".show_info($bksh),$fmt);
+    $result .= print_line("<br />".$lang["date"].": ".show_info($bksh),$fmt);
   }
 
   $result .= print_tableheader($columns,$fmt);
@@ -432,7 +432,7 @@ function print_booked_seats($data = null,$fmt=FMT_CORRECTLINK) {
 	$bksh["time"] = $s["time"];
 	$bksh["theatrename"] = $s["theatrename"];
 	$result .= print_tablefooter($fmt);
-	$result .= print_line("\n".$lang["date"].": ".show_info($bksh),$fmt);
+	$result .= print_line("<br />".$lang["date"].": ".show_info($bksh),$fmt);
 	$result .= print_tableheader($columns,$fmt);
       }
     }
