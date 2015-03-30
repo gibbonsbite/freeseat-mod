@@ -522,6 +522,7 @@ $lang["weekdays"] = array("SU","MA","TI","KE","TO","PE","LA");
 $lang["workingdays"] = 'arkipäivää';
 
 $lang["youare"] = 'Henkilötiedot:';
+$lang["entrance"] = 'Sisään';
 
 $lang["zoneextra"] = ''; // intentionally left blank
 
