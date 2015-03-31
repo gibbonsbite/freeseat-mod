@@ -352,7 +352,7 @@ $lang["admin-thankee"] = 'Varaus tallennettu.';
 $lang["mail-thankee"] = <<<EOD
 Liput voitte lunastaa kassaltamme osoitteessa Helsingintie 12, Järvenpää.<br /><br />
 <strong>Esteen sattuessa pyydämme ystävällisesti peruuttamaan varauksenne soittamalla numeroon (09) 8366770 kassan aukioloaikana
-tai lähettämällä tämän sähköpostin osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong><br /><br />
+tai lähettämällä nämä varaustiedot osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong><br /><br />
 EOD;
 
 $lang["mail-oops"] = <<<EOD
