@@ -147,7 +147,8 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
     do_hook('ticket_finalise');
   }
   if (admin_mode()) echo '<div class="dontprint"><p class="main"><b>'.$lang["admin-thankee"].'</b></p></div>';
-else echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
+else {
+echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
 echo '<p class="main"> Elokuva: ';
 printf(htmlspecialchars($spec["name"])); // movie name
 echo '</p><p class="main">N&auml;yt&ouml;s: ';
@@ -155,6 +156,7 @@ show_show_info($sh,false);
 echo '</p>';
 echo print_booked_seats(null,FMT_HTML);
 show_user_info();
+}
 
   /* Now send a confirmation message if that hasn't been done already. */
 if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
