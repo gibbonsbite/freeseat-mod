@@ -200,7 +200,7 @@ p.warning {
   }
 
 div.warning {
-    background: rgba(255, 255, 255, 1);
+    background-color: #FFFFFF;
     width: 700px;
     margin-left:auto;
 	margin-right:auto;
@@ -279,7 +279,7 @@ div.image-selection{
 }
 
 div.narrow {
-background: rgba(255, 255, 255, 1);
+background-color: #FFFFFF;
 position: relative;
 width: 700px;
     margin-left:auto;
@@ -288,7 +288,7 @@ width: 700px;
 }
 
 div.wide {
-background: rgba(255, 255, 255, 1);
+background-color: #FFFFFF;
 position: relative;
 width: 1000px;
     margin-left:auto;
