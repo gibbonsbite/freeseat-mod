@@ -523,6 +523,8 @@ $lang["workingdays"] = 'arkipäivää';
 
 $lang["youare"] = 'Henkilötiedot:';
 $lang["entrance"] = 'Sisään';
+$lang["show"] = 'Näytös';
+$lang["projection"] = 'Projisointi';
 
 $lang["zoneextra"] = ''; // intentionally left blank
 

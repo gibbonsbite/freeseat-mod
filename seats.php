@@ -223,8 +223,11 @@ show_head(true);
 echo '<h2>'.$lang["err_checkseats"].'</h2>'; // not an error - lang item is a bit misnamed
 echo '<p class="main">Elokuva: ';
 printf(htmlspecialchars($spec["name"])); // movie name
-echo '</p><p class="main">N&auml;yt&ouml;s: ';
+echo '</p><p class="main">'.$lang["show"].': ';
 show_show_info($sh);
+echo '</p><p class="main">'.$lang["projection"].': ';
+if ($sh["theatre"]==1 OR $sh["theatre"]==2 OR $sh["theatre"]==3 OR $sh["theatre"]==7 OR $sh["theatre"]==9 OR $sh["theatre"]==11) echo '2D';
+if ($sh["theatre"]==4 OR $sh["theatre"]==5 OR $sh["theatre"]==6 OR $sh["theatre"]==8 OR $sh["theatre"]==10 OR $sh["theatre"]==12) echo '3D';
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';
 if (admin_mode()) echo '<p class="main">Takaisin [<a href="http://www.studiot123.com/listreserve">'.$lang["link_showlist"].'</a>]</p>';
 
