@@ -145,16 +145,16 @@ function seatcallback($currseat) {
 
   echo "<td colspan='2' align='center' class='$colour'><p class='seats'>";
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
-  	echo '<label><input type="checkbox" name="'.$currseat['id'].'"';
+  	echo '<input type="checkbox" name="'.$currseat['id'].'" id="'.$currseat['id'].'"';
     if ($chkd) echo ' checked="checked"';
-    echo '><label>';
+    echo '><label for="'.$currseat['id'].'">';
   }
   if ($currseat['col']=="INV") {
-  echo '<img src="images/handicap.jpg">';
+  echo '<img src="images/handicap.jpg"></label>';
   } else {
   echo $currseat['row'].$currseat['col'];
   if (($st==ST_FREE) || ($st==ST_DELETED)) {
-  echo "</label></label>";
+  echo "</label>";
   }
   }
 }
