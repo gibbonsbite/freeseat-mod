@@ -265,5 +265,7 @@ echo '<input type="submit" value="'.$lang["continue"].'">';
 
 echo '</form>';
 
-//show_foot();
+if (admin_mode()) {
+show_foot();
+}
 ?>
