@@ -361,7 +361,7 @@ Jos uskot tämän olevan virhe, vastatkaa tähän sähköpostiin tai soittakaa kassall
 EOD;
     //'
 
-$lang["mail-sent"] = 'Sinulle on lähetetty sähköposti varaustiedoillanne. Tarkista roskapostikansio!';
+$lang["mail-sent"] = 'Varauksenne on vahvistettu!';
 $lang["mail-sub-booked"] = 'Varauksenne Studio 123 Järvenpää';
 $lang["mail-sub-cancel"] = 'Varauksen peruutus Studio 123 Järvenpää';
 $lang["mail-sub-gotmoney"] = 'Maksun hyväksyntä';

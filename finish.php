@@ -203,7 +203,7 @@ if (($_SESSION["email"]!="") && (!isset($_SESSION["mail_sent"]))) {
   send_message($smtp_sender,$_SESSION["email"],$lang["mail-sub-booked"],$body);
   $_SESSION["mail_sent"] = true; // last minute kludge to avoid sending the mail every time the user clicks reload
   //  echo $messages;
-  echo '<p class="main">'.$lang["mail-sent"].'</p>';
+  echo '<p class="emph-a-lot">'.$lang["mail-sent"].'</p>';
 } 
  print_legal_info();
  if (!$allpaid && !admin_mode()) {
