@@ -243,9 +243,8 @@ session_destroy(); */
 
    } // end of block run when not credit card or already gone through
      // credit card processor
-if (admin_mode()) {
 show_foot();
-}
+
 log_done();
 
 ?>

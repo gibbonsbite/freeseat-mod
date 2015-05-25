@@ -175,7 +175,5 @@ if (admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com/li
 if (!admin_mode()) printf($lang["backto"],'[<a href="http://www.studiot123.com">'.$lang["link_index"].'</a>]');
 echo '</p>';
 
-if (admin_mode()) {
 show_foot();
-}
 ?>

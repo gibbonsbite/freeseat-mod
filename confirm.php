@@ -147,8 +147,6 @@ if ($_SESSION["payment"] == PAY_CCARD && get_total()>0) {
   echo '<input type="submit" value="'.$lang["book_submit"].'">';
 }
 echo '</form>';
-if (admin_mode()) {
 show_foot();
-}
 
 ?>

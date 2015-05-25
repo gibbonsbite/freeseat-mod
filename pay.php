@@ -207,6 +207,4 @@ if ($pref_country_code != "")  {
 }
 echo '</p><p class="main"><input type="submit" value="'.$lang["continue"].'"></p></form>';
 
-if (admin_mode()) {
 show_foot();
-}
