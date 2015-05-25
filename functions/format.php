@@ -138,7 +138,7 @@ if (admin_mode()) {
 
  Leaving that tiny ad in place just increases chances more people use
  it and therefore motivates me to support it further :) Thanks */
-if (!admin_mode()) printf($lang["poweredby"],'<a href="http://freeseat.sf.net" target="_blank">FreeSeat</a>');
+if (admin_mode()) printf($lang["poweredby"],'<a href="http://freeseat.sf.net" target="_blank">FreeSeat</a>');
 ?></p></div></div></div>
 
 <?php

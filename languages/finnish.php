@@ -221,7 +221,7 @@ $lang["link_showlist"] = 'Ohjelmistoon';
 $lang["link_pay"] = 'Varaustiedot';
 $lang["link_repr"] = 'Näytös lista';
 $lang["link_seats"] = 'Paikan valinta';
-$lang["login"] = 'Kirjaudu sisään (vain henkilökunnalle):';
+$lang["login"] = 'Vain henkilökunnalle:';
 $lang["logout"] = 'Kirjaudu ulos';
 
 $lang["mail-anon"] = <<<EOD
