@@ -80,7 +80,7 @@ function render_seatmap($theatre, $zone,
 	  /* this is the first (numbered) seat of the zone */
 	  $keycallback();
 
-	  echo "<p class='main'><table><tr><td colspan='100%' class='stage'><p class='big'>".$lang["stage"]."</p></td></tr>";
+	  echo "<p class='main'><table><tr><td colspan='100%' class='stage'><p class='big'><img src='/images/valkokangas.png' alt='".$lang["stage"]."'></p></td></tr>";
 	  $table = true;
 	}
 
