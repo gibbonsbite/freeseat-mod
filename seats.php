@@ -56,7 +56,7 @@ function make_legend($numberedseats) {
 	  echo '<p class="main">' . $lang["legend"];
 
 	  echo $lang[($show_price ? "diffprice" : "sameprice")];  
-	  echo '</p><p class="main"><table border="1" cellpadding="5"><tr>';
+	  echo '</p><p class="main"><table border="0" cellpadding="5"><tr>';
 	  if ($show_price && $show_cat) {
 	    echo "<td align='center'>" . $lang["cat_normal"];
 	    echo "<br>".$lang["cat_reduced"];	// don't display reduced prices if there aren't any
@@ -84,6 +84,7 @@ function make_legend($numberedseats) {
 	    echo "<td>".$lang["seat_free"]."</td><td class='stfree' align='center'></td>";
 	  }
 	  echo "</tr></table></p>";
+	  echo '<div class="map">';
 	} // else : don't output anything if there are no seats...
 }
 
@@ -255,13 +256,15 @@ if ($zonelist) {
   kaboom($lang['err_noseats']);
   $currseat = false;
 }
-if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:90px;"><img src="images/arrowup.png"> '.$lang['entrance'].'</div>'; // If Theatre 1 show exit
+if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:90px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 1 show exit
 
-if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:620px;"><img src="images/arrowup.png"> '.$lang['entrance'].'</div>'; // If Theatre 2 show exit
+if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:760px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 2 show exit
 
-if ($sh["theatre"]==3 OR $sh["theatre"]==6 OR $sh["theatre"]==11 OR $sh["theatre"]==12) echo '<div style="position:relative; left:500px;"><img src="images/arrowup.png"> '.$lang['entrance'].'</div>'; // If Theatre 3 show exit
+if ($sh["theatre"]==3 OR $sh["theatre"]==6 OR $sh["theatre"]==11 OR $sh["theatre"]==12) echo '<div style="position:relative; left:725px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 3 show exit
 
-echo '<input type="submit" value="'.$lang["continue"].'">';
+echo '</div>';
+
+echo '<div class="continue"><input type="submit" value="'.$lang["continue"].'"></div>';
 
 echo '</form>';
 

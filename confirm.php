@@ -144,7 +144,7 @@ if ($_SESSION["payment"] == PAY_CCARD && get_total()>0) {
 
 	echo '</form>';
 } else {
-  echo '<input type="submit" value="'.$lang["book_submit"].'">';
+  echo '<div class="continue"><input type="submit" value="'.$lang["book_submit"].'"></div>';
 }
 echo '</form>';
 show_foot();

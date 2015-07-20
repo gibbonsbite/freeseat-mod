@@ -143,10 +143,10 @@ input.fine-print {
   }
   
 input[type=submit] {
-  background: black;
+  background: green;
   color: white;
   height: 1.5em;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 
@@ -284,6 +284,9 @@ position: relative;
 width: 700px;
     margin-left:auto;
 	margin-right:auto;
+	border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px;
 /*    float: right; */
 }
 
@@ -293,9 +296,26 @@ position: relative;
 width: 1000px;
     margin-left:auto;
 	margin-right:auto;
+border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px;
 /*    float: right; */
 }
 
+div.map {
+	background-color:black;
+	border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+}
+
+div.continue {
+padding-left:auto;
+padding-right:auto;
+width:100%;
+text-align:center;
+}
+	
 div.ticket { 
 height: 140px;
 width: 600px;
@@ -313,7 +333,7 @@ span.subpage {
 }
 
 td, th {
-    padding: 3px;
+    padding: 5px;
 }
 
 /* a table that contains a form */
@@ -337,6 +357,10 @@ table.bookinglist td
 
 table.summary {
   margin: 1em 2em;
+}
+
+table {
+	border-spacing: 1px 1px;
 }
 
 td.form {
@@ -375,7 +399,18 @@ td.showlist {
 
 td.stage { 
 	text-align: center; 
-  color: black;	
+  color: black;
+  background-color: black;
+}
+
+td.whiteonblack {
+color: white;
+background-color: black;
+}
+
+td.whiteongrey {
+color: white;
+background-color: grey;
 }
 
 th.ticket { 

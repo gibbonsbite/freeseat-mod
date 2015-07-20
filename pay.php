@@ -205,6 +205,6 @@ if ($pref_country_code != "")  {
 	echo $lang["country"].'&nbsp;:&nbsp;';
 	select_country();
 }
-echo '</p><p class="main"><input type="submit" value="'.$lang["continue"].'"></p></form>';
+echo '</p><div class="continue"><input type="submit" value="'.$lang["continue"].'"></div></form>';
 
 show_foot();

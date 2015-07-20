@@ -80,7 +80,7 @@ function render_seatmap($theatre, $zone,
 	  /* this is the first (numbered) seat of the zone */
 	  $keycallback();
 
-	  echo "<p class='main'><table><tr><td colspan='100%' class='stage'><p class='big'><img src='/images/valkokangas.png' alt='".$lang["stage"]."'></p></td></tr>";
+	  echo "<p class='main'><table style='margin: 0 auto;'><tr><td colspan='100%' class='stage'><p class='big'><img src='/images/valkokangas.png' alt='".$lang["stage"]."'></p></td></tr>";
 	  $table = true;
 	}
 
@@ -94,13 +94,13 @@ function render_seatmap($theatre, $zone,
 	    $even ^= $staggered_seating;
 	  }
 
-	  echo '<td>'.$lang['row'].' '.$currseat['row'];
+	  echo '<td class="whiteongrey">'.$lang['row'].' '.$currseat['row'];
 	  if ($even) echo '<td>';
 	  $x=0;
 	}
 	/* 3. move horizontally to the right position */
 	if ($currseat['x']>$x) {
-	  echo '<td colspan="'.(2*($currseat['x']-$x)).'"></td>';
+	  echo '<td class="whiteonblack" colspan="'.(2*($currseat['x']-$x)).'"></td>';
 	}
 	/* 4. Actually output the seat */
 	$seatcallback($currseat);
