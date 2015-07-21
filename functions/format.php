@@ -54,7 +54,10 @@ function show_head($wide = false,$half=false) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="<?php echo FS_PATH . $stylesheet; ?>">
+<?php
+$get_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if (admin_mode() & strpos($get_url,'finish.php') !== false) echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . 'style/print.css">'; else echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . $stylesheet.'">';
+?>
 <TITLE><?php echo $websitename; ?></TITLE>
 <?php
 
