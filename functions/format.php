@@ -55,8 +55,12 @@ function show_head($wide = false,$half=false) {
 <html>
 <head>
 <?php
-$get_url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-if (admin_mode() & strpos($get_url,'finish.php') !== false) echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . 'style/print.css">'; else echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . $stylesheet.'">';
+$get_url = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if (admin_mode() && strpos($get_url,'finish.php') == true) {
+echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . 'style/print.css">';
+} else if (admin_mode() && strpos($get_url,'bookinglist.php') == true) {
+echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . 'style/print.css">';
+} else echo '<link rel="stylesheet" type="text/css" href="'. FS_PATH . $stylesheet.'">';
 ?>
 <TITLE><?php echo $websitename; ?></TITLE>
 <?php
