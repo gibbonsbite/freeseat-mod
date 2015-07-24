@@ -176,8 +176,8 @@ echo '<p class="main">'.$lang["reqd_info"].'</p>';
 echo '<p class="main_red">';
 
 if (admin_mode()) {
-echo '*'.$lang["firstname"].': <input type="text" name="firstname" value="Studio 123" maxlength="15"> ';
-echo '*'.$lang["lastname"].': <input type="text" name="lastname" value="Kassa" maxlength="15">';
+echo '*'.$lang["firstname"].': <input type="text" name="firstname" value="Studio 123" maxlength="20"> ';
+echo '*'.$lang["lastname"].': <input type="text" name="lastname" value="Kassa" maxlength="20">';
 echo '</p><p class="main">';
 echo ''.$lang["email"].': <input type="text" name="email">';
 } else {
