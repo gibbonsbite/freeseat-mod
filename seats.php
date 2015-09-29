@@ -85,6 +85,13 @@ function make_legend($numberedseats) {
 	  }
 	  echo "</tr></table></p>";
 	  echo '<div class="map">';
+	  
+		if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:39%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 1 screen
+	  
+		if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:25%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 2 screen
+
+		if ($sh["theatre"]==3 OR $sh["theatre"]==6 OR $sh["theatre"]==11 OR $sh["theatre"]==12) echo '<div style="position:relative; left:26%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 3 screen
+	  
 	} // else : don't output anything if there are no seats...
 }
 
