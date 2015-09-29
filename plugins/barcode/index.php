@@ -45,6 +45,7 @@ if ($scannerinput) {
   $showid = $booking['showid']; // the id read on the ticket, to be
 				// compared $id passed to the page
 	$barcode = m_eval("select barcodes.id from barcodes where barcodes.bookingid = $ticketnumber and barcodes.showid=$id"); // Check for saved barcode in database
+	$barcodetime = m_eval("select barcodes.timestamp from barcodes where barcodes.bookingid = $ticketnumber and barcodes.showid=$id");
 
   if ($state == ST_PAID && $showid == $id && $barcode=='') { // Add checking and saving to database
   	$ticketstate = "BOOKED &amp; PAID";
@@ -59,7 +60,7 @@ if ($scannerinput) {
   } else if (($state == ST_BOOKED || $state == ST_SHAKEN) && $showid != $id) {
     $ticketstate = "Booked but NOT PAID &amp WRONG SHOW";
   } else if ($barcode!='') {
-	$ticketstate = "Already used";
+	$ticketstate = "Already used at $barcodetime";
   } else {
     $ticketstate = "Unknown Ticket";
   }
