@@ -131,7 +131,7 @@ if(isset($_GET['nohide'])) {
  if ($remaining>0 || admin_mode() && $allshown) {
     echo "($bk/$tot) [<a href='seats.php?showid=".$sh["id"]."'>".$lang["book"]."</a>] ";
 	if (admin_mode()) {
-	echo "[<a href='bookinglist.php?st=2&showid=".$sh["id"]."'>".$lang["link_bookinglist"]."</a>] ";
+	echo "[<a href='bookinglist.php?st=2&showid=".$sh["id"]."&sort=lastname'>".$lang["link_bookinglist"]."</a>] ";
 	echo "[<a href='".FS_PATH."plugins/bookingmap/?showid=".$sh["id"]."'>".$lang["bookingmap"]."</a>]";
 	echo ' [<input type="checkbox" name="disable-'.$sh["id"].($sh["disabled"]?'" checked>':'">').$lang["disabled"].']';
 	}
