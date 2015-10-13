@@ -40,7 +40,7 @@ function adminprint_process() {
     print_legal_info();
     $showid = $x['showid'];
     echo "<div class='dontprint'><p class='main'>";
-    printf($lang['backto'],"[<a href='bookinglist.php?showid=$showid'>".$lang["link_bookinglist"]."</a>] ");
+    printf($lang['backto'],"[<a href='bookinglist.php?showid=$showid&sort=lastname'>".$lang["link_bookinglist"]."</a>] ");
     echo "</p></div>";
     show_foot();
     exit;

@@ -110,7 +110,7 @@ if (admin_mode()) {
   echo "<h2>".$lang["admin"]."</h2>";
   
   echo '<p class="main">';
-  printf($lang["bookinglist"],'[<a href="bookinglist.php?st=2">','</a>]');
+  printf($lang["bookinglist"],'[<a href="bookinglist.php?st=2&sort=lastname">','</a>]');
   echo '</p>';
 
   echo '<p class="main">';

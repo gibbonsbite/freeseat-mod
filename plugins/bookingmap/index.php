@@ -85,7 +85,7 @@ echo '<h2>'.$lang["bookingmap"].'</h2><p class="main">';
 show_show_info($sh,false);
 // echo '</p><div class="popupbox"></div><p class="main"><ul><li><p>';
 echo '<p class="main"><ul><li><p>';
-printf($lang["seeasalist"],'[<a href="'. FS_PATH .'bookinglist.php?showid='.$sh['id'].'">','</a>]');
+printf($lang["seeasalist"],'[<a href="'. FS_PATH .'bookinglist.php?showid='.$sh['id'].'&sort=lastname">','</a>]');
 echo '</p><li><p>';
 printf($lang["bookagain"],'[<a href="'. FS_PATH .'seats.php?showid='.$sh['id'].'">','</a>]');
 echo '</p></ul></p><table><tr><td><p class="main">';
