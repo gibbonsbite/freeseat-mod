@@ -26,6 +26,7 @@ function send_message($from,$to,$subject,$body) {
   $mail = new PHPMailer();
   $mail->IsSMTP();      	// send via SMTP
   $mail->Host     = $smtp_server;
+  $mail->Port = 26;
   $mail->Helo     = $smtp_helo;
   $mail->SMTPAuth = $smtp_auth;
   if ($smtp_auth) {
