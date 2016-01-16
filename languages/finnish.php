@@ -111,7 +111,7 @@ $lang["err_setbookstatus"] = 'Virhe muuttaessa paikan tilaa';
 $lang["err_shellonly"] = 'PÄÄSY KIELLETTY - Pääsy tälle sivulle vaatii shell tunnuksia';
 $lang["err_show_entry"] = 'Tätä näytöstä ei voida tallentaa ennen kuin täydennät puuttuvat tiedot.';
 $lang["err_showid"] = 'Väärä näytöksen tunnus';
-$lang["err_smtp"] = 'Varoitus: viestin lähetys epäonnistui: %1$s - Palvelin vastasi: %2$s';
+$lang["err_smtp"] = 'Huom: Varauksenne on vahvistettu, mutta sähköpostin lähetys epäonnistui: %1$s - Palvelin vastasi: %2$s';
 $lang["err_spectacle"] = 'Virhe etsiessä elokuvan tietoja';
 $lang["err_spectacleid"] = 'Väärä elokuvan tunnus'; // § NEW
 $lang["err_upload"] = 'Virhe lähettäessä tiedostoa';
@@ -351,7 +351,7 @@ $lang["admin-thankee"] = 'Varaus tallennettu.';
 
 $lang["mail-thankee"] = <<<EOD
 Liput voitte lunastaa kassaltamme osoitteessa Helsingintie 12, Järvenpää.<br /><br />
-<strong>Älä vastaa tähän sähköpostiin. Esteen sattuessa pyydämme ystävällisesti peruuttamaan varauksenne soittamalla numeroon (09) 8366770 kassan aukioloaikana
+<strong>Esteen sattuessa pyydämme ystävällisesti peruuttamaan varauksenne soittamalla numeroon (09) 8366770 kassan aukioloaikana
 tai lähettämällä nämä varaustiedot osoitteeseen <a href="mailto:peruutukset@studiot123.com?Subject=Varauksen peruutus" target="_top">peruutukset@studiot123.com</a></strong><br /><br />
 EOD;
 
