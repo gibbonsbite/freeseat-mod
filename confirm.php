@@ -27,6 +27,8 @@ foreach (array("firstname","lastname","phone","email","address","postalcode","ci
       $_SESSION[$a] = make_reasonable(nogpc($_POST[$a]));
 }
 
+if (isset($_POST["email"])) $_SESSION["email"] = make_email_reasonable(nogpc($_POST["email"]));
+
 /* See how many seats must be marked reduced/invitation. This map maps
  CAT_xyz entries to the number of requested seats. */
 $hook_catmap = array();

@@ -39,6 +39,10 @@ function make_reasonable($s) {
   return just_keep($s," -+.,@0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZÀÁÃÂÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòôõö÷øùúûüışÿ");
 }
 
+function make_email_reasonable($s) {
+  return str_replace(' ','',$s);
+}
+
 /** replace all chars of $x that are NOT in $ok by underscores **/
 function just_keep($x,$ok) {
 
@@ -78,7 +82,7 @@ function sanitise_time($x) {
 I won't piss off users with über-elaborated checks - if a user really
 wants to enter an invalid address, then just let him do it. */
 function is_email_ok($m) {
-  return (strpos($m,"@")) && (strpos($m," ")===FALSE);
+  return (strpos($m,"@"));
 }
 
 function kaboom($s) {
