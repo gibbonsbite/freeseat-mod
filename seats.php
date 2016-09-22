@@ -263,11 +263,11 @@ if ($zonelist) {
   kaboom($lang['err_noseats']);
   $currseat = false;
 }
-if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:90px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 1 show exit
+if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:90px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 1 show exit
 
-if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:760px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 2 show exit
+if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:760px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 2 show exit
 
-if ($sh["theatre"]==3 OR $sh["theatre"]==6 OR $sh["theatre"]==11 OR $sh["theatre"]==12) echo '<div style="position:relative; left:725px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 3 show exit
+if ($sh["theatre"]==3 OR $sh["theatre"]==6 OR $sh["theatre"]==11 OR $sh["theatre"]==12) echo '<div style="position:relative; left:725px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 3 show exit
 
 echo '</div>';
 
