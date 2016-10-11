@@ -59,10 +59,10 @@ if ($scannerinput) {
     $ticketstate = "Booked &amp Paid but WRONG SHOW";
   } else if (($state == ST_BOOKED || $state == ST_SHAKEN) && $showid != $id) {
     $ticketstate = "Booked but NOT PAID &amp WRONG SHOW";
-  } else if (($state == ST_DELETED) && $showid != $id) {
-    $ticketstate = "DELETED TICKET!";
   } else if ($barcode!='') {
 	$ticketstate = "Already used at $barcodetime";
+  } else if (($state == ST_DELETED) && $showid == $id) {
+    $ticketstate = "DELETED TICKET!";
   } else {
     $ticketstate = "Unknown Ticket";
   }
