@@ -24,7 +24,7 @@ function bookingmap_linkfromseats() {
 
   if (admin_mode()) {
     echo '<p class="fine-print">Siirry ';
-	echo '<a href="bookinglist.php?showid='.$sh['id'].'&sort=lastname">'.$lang["link_bookinglist"].'</a></p>';
+	echo '<a href="bookinglist.php?st=2&showid='.$sh['id'].'&sort=lastname">'.$lang["link_bookinglist"].'</a></p>';
 	echo '<p class="fine-print">';
     printf($lang["seeasamap"],
 '[<a href="'. FS_PATH . 'plugins/bookingmap/?showid='.$sh['id'].'">','</a>]');
