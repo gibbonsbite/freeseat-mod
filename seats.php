@@ -86,7 +86,7 @@ function make_legend($numberedseats) {
 	  echo "</tr></table></p>";
 	  echo '<div class="map">';
 	  
-		if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:39%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 1 screen
+		if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8 OR $sh["theatre"]==13 OR $sh["theatre"]==14 OR $sh["theatre"]==15 OR $sh["theatre"]==16) echo '<div style="position:relative; left:39%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 1 screen
 	  
 		if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:25%;"><img src="/images/valkokangas.png" alt="'.$lang["stage"].'"></div>'; // Show theatre 2 screen
 
@@ -234,8 +234,8 @@ printf(htmlspecialchars($spec["name"])); // movie name
 echo '</p><p class="main">'.$lang["show"].': ';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["projection"].': ';
-if ($sh["theatre"]==1 OR $sh["theatre"]==2 OR $sh["theatre"]==3 OR $sh["theatre"]==7 OR $sh["theatre"]==9 OR $sh["theatre"]==11) echo '2D';
-if ($sh["theatre"]==4 OR $sh["theatre"]==5 OR $sh["theatre"]==6 OR $sh["theatre"]==8 OR $sh["theatre"]==10 OR $sh["theatre"]==12) echo '3D';
+if ($sh["theatre"]==1 OR $sh["theatre"]==2 OR $sh["theatre"]==3 OR $sh["theatre"]==7 OR $sh["theatre"]==9 OR $sh["theatre"]==11 OR $sh["theatre"]==13 OR $sh["theatre"]==16) echo '2D';
+if ($sh["theatre"]==4 OR $sh["theatre"]==5 OR $sh["theatre"]==6 OR $sh["theatre"]==8 OR $sh["theatre"]==10 OR $sh["theatre"]==12 OR $sh["theatre"]==14 OR $sh["theatre"]==15) echo '3D';
 echo '</p><p class="main">'.$lang["intro_seats"].'</p>';
 if (admin_mode()) echo '<p class="main">Takaisin [<a href="http://www.studiot123.com/listreserve">'.$lang["link_showlist"].'</a>]</p>';
 
@@ -263,7 +263,7 @@ if ($zonelist) {
   kaboom($lang['err_noseats']);
   $currseat = false;
 }
-if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8) echo '<div style="position:relative; left:90px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 1 show exit
+if ($sh["theatre"]==1 OR $sh["theatre"]==4 OR $sh["theatre"]==7 OR $sh["theatre"]==8 OR $sh["theatre"]==13 OR $sh["theatre"]==14 OR $sh["theatre"]==15 OR $sh["theatre"]==16) echo '<div style="position:relative; left:90px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 1 show exit
 
 if ($sh["theatre"]==2 OR $sh["theatre"]==5 OR $sh["theatre"]==9 OR $sh["theatre"]==10) echo '<div style="position:relative; left:760px; width:40px; height:80px;"><img src="images/arrowup.png"><p class="seats"> '.$lang['entrance'].'</p></div>'; // If Theatre 2 show exit
 

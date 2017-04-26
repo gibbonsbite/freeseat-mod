@@ -239,7 +239,7 @@ EOD;
  in the spectacle name and alter/extended it when needed (e.g. French
  de+le = du, German von+dem = vom, etc) */
 $lang["mail-booked"] = <<<EOD
-Hyvä asiakas,<br />
+Hyvä asiakkaamme,<br />
 kiitos varauksesta.<br /><br />
 
 Alla varauksenne tiedot:
@@ -409,7 +409,8 @@ $lang["pay_ccard"] = 'luottokortilla';
 $lang["pay_other"] = 'Kyllä';
 $lang["pay_postal"] = 'postimaksulla';
 $lang["payinfo_cash"] = <<<EOD
-<br /><strong>Liput elokuviin tulisi lunastaa viimeistään 30 minuuttia ennen näytöksen alkua.</strong><br />
+<br /><strong>Huom! Lippuja lunastaessa varaus löytyy nimellänne ja liput elokuviin tulisi lunastaa
+viimeistään 30 minuuttia ennen näytöksen alkua.</strong><br />
 <u>Oopperoihin ja baletteihin liput tulisi lunastaa 2 päivää ennen näytöstä väliaikatarjoilun vuoksi.</u><br />
 
 EOD;
@@ -464,8 +465,8 @@ $lang["seeasalist"] = 'Näytä %1$slistana%2$s';
 $lang["seeasamap"] = 'Näytä varaukset tähän näytökseen %1$svarauskarttana%2$s';
 $lang["select"] = 'Valitse';
 $lang["select_payment"] = 'Maksetaanko heti:';
-$lang["selected_1"] = '1 paikka valittu';
-$lang["selected_n"] = '%1$d paikkaa valittu';
+$lang["selected_1"] = '1 paikka';
+$lang["selected_n"] = '%1$d paikkaa';
 $lang["sentto"] = 'Viesti lähetetty %1$s';
 $lang["set_status_to"] = 'Paikat: ';
 $lang["show_any"] = 'Kaikki näytökset';
