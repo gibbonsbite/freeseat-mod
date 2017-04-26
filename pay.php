@@ -56,7 +56,7 @@ show_head();
 echo '<h2>'.$lang["summary"].'</h2>';
 
 echo "<p>Elokuva: ";
-printf(htmlspecialchars($spec["name"])); // the movie name is shown
+printf($spec["name"]); // the movie name is shown
 echo "</p><p>N&auml;yt&ouml;s: ";
 show_show_info($sh);
 echo "</p>\n";

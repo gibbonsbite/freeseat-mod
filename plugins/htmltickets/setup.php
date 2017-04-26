@@ -44,7 +44,7 @@ function htmltickets_body($booking) {
   if (!$sh) $sh = get_show($booking["showid"]);
   $spectacleid = $sh["spectacleid"];
   $spec = get_spectacle($spectacleid);
-  printf(htmlspecialchars($spec["name"])); //print movie name
+  printf($spec["name"]); //print movie name
   //echo "<p><img class='ticketsponsors' src='".FS_PATH . $ticket_logo."'></p>";
   echo "<p class='ticketdate'>";
   show_show_info(get_show($booking["showid"]),false);

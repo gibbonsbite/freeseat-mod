@@ -230,7 +230,7 @@ show_head(true);
 
 echo '<h2>'.$lang["err_checkseats"].'</h2>'; // not an error - lang item is a bit misnamed
 echo '<p class="main">Elokuva: ';
-printf(htmlspecialchars($spec["name"])); // movie name
+printf($spec["name"]); // movie name
 echo '</p><p class="main">'.$lang["show"].': ';
 show_show_info($sh);
 echo '</p><p class="main">'.$lang["projection"].': ';

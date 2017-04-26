@@ -120,7 +120,7 @@ $spec = get_spectacle($spectacleid);
 echo '<h2>'.$lang["summary"].'</h2>';
 
 echo '<p class="main"> Elokuva: ';
-printf(htmlspecialchars($spec["name"])); // movie name
+printf($spec["name"]); // movie name
 echo '</p><p class="main">N&auml;yt&ouml;s: ';
 show_show_info();
 echo '</p>';

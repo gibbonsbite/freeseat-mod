@@ -53,7 +53,7 @@ function barcode_ticket($booking) {
    barcode_ticket_left($booking);
  echo "</td>";
  echo "<td align=center valign=middle border=0>";
- echo "<span class='tickettitle'>" . htmlspecialchars($spec["name"]) . "</span><br>";
+ echo "<span class='tickettitle'>" . $spec["name"] . "</span><br>";
  echo "<span class='ticketdate'>";
  show_show_info($sh, false);
  echo '</span><br>';

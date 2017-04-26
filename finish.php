@@ -150,7 +150,7 @@ if (($_SESSION["payment"]==PAY_CCARD) && ($_SESSION["booking_done"]!=ST_PAID)
 else {
 echo '<p class="main"><b>'.$lang["mail-thankee"].'</b></p>';
 echo '<p class="main"> Elokuva: ';
-printf(htmlspecialchars($spec["name"])); // movie name
+printf($spec["name"]); // movie name
 echo '</p><p class="main">N&auml;yt&ouml;s: ';
 show_show_info($sh,false);
 echo '</p>';

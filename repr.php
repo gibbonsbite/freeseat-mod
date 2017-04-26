@@ -82,7 +82,7 @@ do_hook('repr_process');
 show_head();
 
 echo '<h2>';
-printf($lang["showlist"],htmlspecialchars($spec["name"]));
+printf($lang["showlist"],$spec["name"]);
 echo '</h2>';
 
 if (admin_mode())
