@@ -167,11 +167,11 @@ function print_var( $name, $value, $headername=null) {
 	  echo '<textarea name="'.$name.'" border=1 rows=6 cols=35>' . $value; 
 	  echo '</textarea>';
 	} elseif(strpos($name,'d')!==false){
-		$escvalue = htmlspecialchars($value);
+		$escvalue = $value;
 		echo '<script>$(function() { $( "#'.$name.'" ).datepicker({ dateFormat: "yy-mm-dd" }); });</script>';
 		echo '<input '.($ready?'type="hidden" ':'').' name="'.$name.'" id="'.$name.'" value="'.$escvalue.'">';
 		} else {
-		$escvalue = htmlspecialchars($value);
+		$escvalue = $value;
 		echo '<input '.($ready?'type="hidden" ':'').' name="'.$name.'" value="'.$escvalue.'">';
 	}
 	if ($ready) {
