@@ -44,7 +44,7 @@ function bookingnotes_tablerow($b) {
   global $checkboxes;
 
   if ($checkboxes) {
-    return'<td><input name="n'.$b['bookid'].'" value="'.htmlspecialchars($b['notes']).'" maxlength=255>';
+    return'<td><input name="n'.$b['bookid'].'" value="'.$b['notes'].'" maxlength=255>';
   } else {
     return '<td>'.htmlspecialchars($b['notes']);
   }
